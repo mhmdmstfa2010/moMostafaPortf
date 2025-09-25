@@ -39,12 +39,14 @@ A modern, professional portfolio website for a DevOps Engineer built with Next.j
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd mo-mostafa-portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -54,6 +56,7 @@ pnpm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -81,20 +84,20 @@ Edit `src/data/projects.ts`:
 ```typescript
 export const projects: Project[] = [
   {
-    id: 'your-project-id',
-    title: 'Your Project Title',
-    image: '/images/your-project-image.png',
-    tech: ['React', 'Node.js', 'AWS'],
-    short: 'Brief project description',
+    id: "your-project-id",
+    title: "Your Project Title",
+    image: "/images/your-project-image.png",
+    tech: ["React", "Node.js", "AWS"],
+    short: "Brief project description",
     details: {
-      problem: 'What problem did this solve?',
-      solution: 'How did you solve it?',
-      results: 'What was the impact?',
-      architectureImage: '/images/your-architecture.png',
-      repo: 'https://github.com/your-repo',
-      live: 'https://your-live-demo.com'
-    }
-  }
+      problem: "What problem did this solve?",
+      solution: "How did you solve it?",
+      results: "What was the impact?",
+      architectureImage: "/images/your-architecture.png",
+      repo: "https://github.com/your-repo",
+      live: "https://your-live-demo.com",
+    },
+  },
 ];
 ```
 
@@ -105,12 +108,12 @@ Edit `src/data/certificates.ts`:
 ```typescript
 export const certificates: Certificate[] = [
   {
-    id: 'cert-id',
-    name: 'Certificate Name',
-    issuer: 'Issuing Organization',
-    image: '/images/your-cert.png',
-    issueDate: '2024-01-01'
-  }
+    id: "cert-id",
+    name: "Certificate Name",
+    issuer: "Issuing Organization",
+    image: "/images/your-cert.png",
+    issueDate: "2024-01-01",
+  },
 ];
 ```
 
@@ -120,12 +123,12 @@ The color palette is defined in `src/app/globals.css`:
 
 ```css
 :root {
-  --primary: #1E3A8A;    /* Dark navy */
-  --secondary: #2563EB;  /* Blue */
-  --accent: #38BDF8;     /* Sky blue */
-  --bg: #F9FAFB;         /* Off-white */
-  --text: #111827;       /* Dark text */
-  --muted: #6B7280;      /* Secondary text */
+  --primary: #1e3a8a; /* Dark navy */
+  --secondary: #2563eb; /* Blue */
+  --accent: #38bdf8; /* Sky blue */
+  --bg: #f9fafb; /* Off-white */
+  --text: #111827; /* Dark text */
+  --muted: #6b7280; /* Secondary text */
 }
 ```
 

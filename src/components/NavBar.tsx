@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const navItems = [
-  { href: '#hero', label: 'Home' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#certificates', label: 'Certificates' },
-  { href: '#contact', label: 'Contact' },
+  { href: "#hero", label: "Home" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#certificates", label: "Certificates" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +28,7 @@ export default function NavBar() {
       { threshold: 0.6 }
     );
 
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll("section[id]");
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
@@ -37,7 +37,7 @@ export default function NavBar() {
   const scrollToSection = (href: string) => {
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
@@ -47,7 +47,13 @@ export default function NavBar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}>
+          <Link
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("#hero");
+            }}
+          >
             <motion.div
               className="text-xl font-bold text-[var(--primary)] cursor-pointer"
               whileHover={{ scale: 1.05 }}
@@ -65,8 +71,8 @@ export default function NavBar() {
                 onClick={() => scrollToSection(item.href)}
                 className={`text-sm font-medium transition-colors duration-200 hover:text-[var(--secondary)] ${
                   activeSection === item.href.slice(1)
-                    ? 'text-[var(--secondary)]'
-                    : 'text-[var(--muted)]'
+                    ? "text-[var(--secondary)]"
+                    : "text-[var(--muted)]"
                 }`}
               >
                 {item.label}
@@ -109,7 +115,7 @@ export default function NavBar() {
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{
-            height: isOpen ? 'auto' : 0,
+            height: isOpen ? "auto" : 0,
             opacity: isOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
@@ -122,8 +128,8 @@ export default function NavBar() {
                 onClick={() => scrollToSection(item.href)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
                   activeSection === item.href.slice(1)
-                    ? 'text-[var(--secondary)] bg-blue-50'
-                    : 'text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-gray-50'
+                    ? "text-[var(--secondary)] bg-blue-50"
+                    : "text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-gray-50"
                 }`}
               >
                 {item.label}

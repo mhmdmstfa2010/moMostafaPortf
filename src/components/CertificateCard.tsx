@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Certificate } from '../data/certificates';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Certificate } from "../data/certificates";
 
 interface CertificateCardProps {
   certificate: Certificate;
@@ -10,7 +10,11 @@ interface CertificateCardProps {
   index: number;
 }
 
-export default function CertificateCard({ certificate, onOpen, index }: CertificateCardProps) {
+export default function CertificateCard({
+  certificate,
+  onOpen,
+  index,
+}: CertificateCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -30,20 +34,20 @@ export default function CertificateCard({ certificate, onOpen, index }: Certific
           className="w-24 h-24 object-contain"
         />
       </div>
-      
+
       <div className="p-4">
         <h3 className="font-semibold text-[var(--text)] text-sm mb-2 leading-tight">
           {certificate.name}
         </h3>
-        
+
         <div className="space-y-1">
           <p className="text-[var(--secondary)] text-sm font-medium">
             {certificate.issuer}
           </p>
           <p className="text-[var(--muted)] text-xs">
-            {new Date(certificate.issueDate).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long'
+            {new Date(certificate.issueDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
             })}
           </p>
         </div>

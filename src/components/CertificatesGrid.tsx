@@ -1,18 +1,19 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { FiX } from 'react-icons/fi';
-import { certificates, Certificate } from '../data/certificates';
-import CertificateCard from './CertificateCard';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { FiX } from "react-icons/fi";
+import { certificates, Certificate } from "../data/certificates";
+import CertificateCard from "./CertificateCard";
 
 export default function CertificatesGrid() {
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const [selectedCertificate, setSelectedCertificate] =
+    useState<Certificate | null>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const handleOpenLightbox = (certificateId: string) => {
-    const certificate = certificates.find(c => c.id === certificateId);
+    const certificate = certificates.find((c) => c.id === certificateId);
     if (certificate) {
       setSelectedCertificate(certificate);
       setIsLightboxOpen(true);
@@ -25,7 +26,10 @@ export default function CertificatesGrid() {
   };
 
   return (
-    <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--bg)]">
+    <section
+      id="certificates"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--bg)]"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +42,8 @@ export default function CertificatesGrid() {
             Certifications
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
-            Professional certifications that validate my expertise in cloud platforms, DevOps tools, and modern infrastructure practices
+            Professional certifications that validate my expertise in cloud
+            platforms, DevOps tools, and modern infrastructure practices
           </p>
         </motion.div>
 
@@ -79,7 +84,10 @@ export default function CertificatesGrid() {
               >
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                  <h3 id="lightbox-title" className="text-lg font-semibold text-[var(--text)]">
+                  <h3
+                    id="lightbox-title"
+                    className="text-lg font-semibold text-[var(--text)]"
+                  >
                     {selectedCertificate.name}
                   </h3>
                   <button
@@ -112,10 +120,13 @@ export default function CertificatesGrid() {
                       {selectedCertificate.issuer}
                     </p>
                     <p className="text-[var(--muted)] text-sm">
-                      Issued {new Date(selectedCertificate.issueDate).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
+                      Issued{" "}
+                      {new Date(
+                        selectedCertificate.issueDate
+                      ).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
                       })}
                     </p>
                   </div>

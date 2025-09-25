@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { 
-  FiGitBranch, 
-  FiCloud, 
-  FiSettings, 
-  FiBox, 
+import { motion } from "framer-motion";
+import {
+  FiGitBranch,
+  FiCloud,
+  FiSettings,
+  FiBox,
   FiActivity,
   FiServer,
   FiDatabase,
@@ -13,13 +13,13 @@ import {
   FiMonitor,
   FiCode,
   FiTool,
-  FiZap
-} from 'react-icons/fi';
+  FiZap,
+} from "react-icons/fi";
 
 interface Skill {
   name: string;
   icon: React.ReactNode;
-  level: 'Expert' | 'Advanced' | 'Intermediate';
+  level: "Expert" | "Advanced" | "Intermediate";
 }
 
 interface SkillGroup {
@@ -29,61 +29,61 @@ interface SkillGroup {
 
 const skillGroups: SkillGroup[] = [
   {
-    title: 'CI/CD & Version Control',
+    title: "CI/CD & Version Control",
     skills: [
-      { name: 'GitHub Actions', icon: <FiGitBranch />, level: 'Expert' },
-      { name: 'Jenkins', icon: <FiTool />, level: 'Expert' },
-      { name: 'GitLab CI', icon: <FiGitBranch />, level: 'Advanced' },
-      { name: 'Azure DevOps', icon: <FiCode />, level: 'Advanced' },
-    ]
+      { name: "GitHub Actions", icon: <FiGitBranch />, level: "Expert" },
+      { name: "Jenkins", icon: <FiTool />, level: "Expert" },
+      { name: "GitLab CI", icon: <FiGitBranch />, level: "Advanced" },
+      { name: "Azure DevOps", icon: <FiCode />, level: "Advanced" },
+    ],
   },
   {
-    title: 'Cloud Platforms',
+    title: "Cloud Platforms",
     skills: [
-      { name: 'AWS', icon: <FiCloud />, level: 'Expert' },
-      { name: 'Azure', icon: <FiCloud />, level: 'Advanced' },
-      { name: 'Google Cloud', icon: <FiCloud />, level: 'Intermediate' },
-    ]
+      { name: "AWS", icon: <FiCloud />, level: "Expert" },
+      { name: "Azure", icon: <FiCloud />, level: "Advanced" },
+      { name: "Google Cloud", icon: <FiCloud />, level: "Intermediate" },
+    ],
   },
   {
-    title: 'Infrastructure as Code',
+    title: "Infrastructure as Code",
     skills: [
-      { name: 'Terraform', icon: <FiSettings />, level: 'Expert' },
-      { name: 'CloudFormation', icon: <FiSettings />, level: 'Advanced' },
-      { name: 'Ansible', icon: <FiTool />, level: 'Advanced' },
-      { name: 'Pulumi', icon: <FiCode />, level: 'Intermediate' },
-    ]
+      { name: "Terraform", icon: <FiSettings />, level: "Expert" },
+      { name: "CloudFormation", icon: <FiSettings />, level: "Advanced" },
+      { name: "Ansible", icon: <FiTool />, level: "Advanced" },
+      { name: "Pulumi", icon: <FiCode />, level: "Intermediate" },
+    ],
   },
   {
-    title: 'Containers & Orchestration',
+    title: "Containers & Orchestration",
     skills: [
-      { name: 'Docker', icon: <FiBox />, level: 'Expert' },
-      { name: 'Kubernetes', icon: <FiServer />, level: 'Expert' },
-      { name: 'Helm', icon: <FiSettings />, level: 'Advanced' },
-      { name: 'Istio', icon: <FiShield />, level: 'Advanced' },
-    ]
+      { name: "Docker", icon: <FiBox />, level: "Expert" },
+      { name: "Kubernetes", icon: <FiServer />, level: "Expert" },
+      { name: "Helm", icon: <FiSettings />, level: "Advanced" },
+      { name: "Istio", icon: <FiShield />, level: "Advanced" },
+    ],
   },
   {
-    title: 'Monitoring & Observability',
+    title: "Monitoring & Observability",
     skills: [
-      { name: 'Prometheus', icon: <FiActivity />, level: 'Expert' },
-      { name: 'Grafana', icon: <FiMonitor />, level: 'Expert' },
-      { name: 'ELK Stack', icon: <FiDatabase />, level: 'Advanced' },
-      { name: 'Jaeger', icon: <FiZap />, level: 'Advanced' },
-    ]
-  }
+      { name: "Prometheus", icon: <FiActivity />, level: "Expert" },
+      { name: "Grafana", icon: <FiMonitor />, level: "Expert" },
+      { name: "ELK Stack", icon: <FiDatabase />, level: "Advanced" },
+      { name: "Jaeger", icon: <FiZap />, level: "Advanced" },
+    ],
+  },
 ];
 
 const getLevelColor = (level: string) => {
   switch (level) {
-    case 'Expert':
-      return 'bg-green-100 text-green-800';
-    case 'Advanced':
-      return 'bg-blue-100 text-blue-800';
-    case 'Intermediate':
-      return 'bg-yellow-100 text-yellow-800';
+    case "Expert":
+      return "bg-green-100 text-green-800";
+    case "Advanced":
+      return "bg-blue-100 text-blue-800";
+    case "Intermediate":
+      return "bg-yellow-100 text-yellow-800";
     default:
-      return 'bg-gray-100 text-gray-800';
+      return "bg-gray-100 text-gray-800";
   }
 };
 
@@ -102,7 +102,8 @@ export default function Skills() {
             Technical Skills
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
-            Comprehensive expertise in modern DevOps practices, cloud technologies, and infrastructure automation
+            Comprehensive expertise in modern DevOps practices, cloud
+            technologies, and infrastructure automation
           </p>
         </motion.div>
 
@@ -119,7 +120,7 @@ export default function Skills() {
               <h3 className="text-xl font-semibold text-[var(--text)] mb-6">
                 {group.title}
               </h3>
-              
+
               <div className="space-y-4">
                 {group.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -127,7 +128,10 @@ export default function Skills() {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: (groupIndex * 0.1) + (skillIndex * 0.05) }}
+                    transition={{
+                      duration: 0.4,
+                      delay: groupIndex * 0.1 + skillIndex * 0.05,
+                    }}
                     className="flex items-center justify-between"
                   >
                     <div className="flex items-center gap-3">
@@ -138,8 +142,12 @@ export default function Skills() {
                         {skill.name}
                       </span>
                     </div>
-                    
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getLevelColor(skill.level)}`}>
+
+                    <span
+                      className={`px-2 py-1 text-xs font-medium rounded-full ${getLevelColor(
+                        skill.level
+                      )}`}
+                    >
                       {skill.level}
                     </span>
                   </motion.div>

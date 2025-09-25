@@ -3,14 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* Custom portfolio colors */
-  --primary: #1E3A8A;
-  --secondary: #2563EB;
-  --accent: #38BDF8;
-  --bg: #F9FAFB;
+  --primary: #1e3a8a;
+  --secondary: #2563eb;
+  --accent: #38bdf8;
+  --bg: #f9fafb;
   --text: #111827;
-  --muted: #6B7280;
+  --muted: #6b7280;
 }
 
 @media (prefers-color-scheme: dark) {

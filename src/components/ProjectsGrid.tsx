@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { projects, Project } from '../data/projects';
-import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { projects, Project } from "../data/projects";
+import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 
 export default function ProjectsGrid() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (projectId: string) => {
-    const project = projects.find(p => p.id === projectId);
+    const project = projects.find((p) => p.id === projectId);
     if (project) {
       setSelectedProject(project);
       setIsModalOpen(true);
@@ -37,7 +37,8 @@ export default function ProjectsGrid() {
             Featured Projects
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
-            A selection of DevOps and infrastructure projects that showcase my expertise in automation, scalability, and reliability
+            A selection of DevOps and infrastructure projects that showcase my
+            expertise in automation, scalability, and reliability
           </p>
         </motion.div>
 

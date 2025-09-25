@@ -14,12 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mo Mostafa - DevOps Engineer & Infrastructure Specialist",
-  description: "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems. Expert in AWS, Kubernetes, Terraform, and modern DevOps practices.",
-  keywords: "DevOps, Cloud Infrastructure, AWS, Kubernetes, Terraform, CI/CD, Automation, Infrastructure as Code",
+  description:
+    "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems. Expert in AWS, Kubernetes, Terraform, and modern DevOps practices.",
+  keywords:
+    "DevOps, Cloud Infrastructure, AWS, Kubernetes, Terraform, CI/CD, Automation, Infrastructure as Code",
   authors: [{ name: "Mo Mostafa" }],
   openGraph: {
     title: "Mo Mostafa - DevOps Engineer",
-    description: "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems.",
+    description:
+      "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems.",
     url: "https://mo-mostafa-portfolio.vercel.app",
     siteName: "Mo Mostafa Portfolio",
     images: [
@@ -36,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mo Mostafa - DevOps Engineer",
-    description: "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems.",
+    description:
+      "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems.",
     images: ["/images/placeholder-profile.png"],
   },
   robots: {

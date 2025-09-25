@@ -1,22 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin, FiCopy, FiCheck } from 'react-icons/fi';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FiMail, FiGithub, FiLinkedin, FiCopy, FiCheck } from "react-icons/fi";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [emailCopied, setEmailCopied] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -24,17 +26,19 @@ export default function Contact() {
     e.preventDefault();
     // For now, just create a mailto link with the form data
     const subject = encodeURIComponent(`Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
     window.location.href = `mailto:mo@example.com?subject=${subject}&body=${body}`;
   };
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('mo@example.com');
+      await navigator.clipboard.writeText("mo@example.com");
       setEmailCopied(true);
       setTimeout(() => setEmailCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy email:', err);
+      console.error("Failed to copy email:", err);
     }
   };
 
@@ -52,7 +56,8 @@ export default function Contact() {
             Let&apos;s Work Together
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-            Interested in discussing DevOps opportunities, infrastructure challenges, or collaboration? I&apos;d love to hear from you.
+            Interested in discussing DevOps opportunities, infrastructure
+            challenges, or collaboration? I&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -69,7 +74,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-[var(--text)] mb-6">
                 Get in Touch
               </h3>
-              
+
               {/* Email */}
               <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
                 <div className="w-10 h-10 bg-[var(--secondary)]/10 rounded-lg flex items-center justify-center">
@@ -110,7 +115,7 @@ export default function Contact() {
                 >
                   <FiGithub className="w-5 h-5" />
                 </motion.a>
-                
+
                 <motion.a
                   href="https://linkedin.com"
                   target="_blank"
@@ -147,7 +152,10 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[var(--text)] mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-[var(--text)] mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -163,7 +171,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[var(--text)] mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-[var(--text)] mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -179,7 +190,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[var(--text)] mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-[var(--text)] mb-2"
+                >
                   Message
                 </label>
                 <textarea

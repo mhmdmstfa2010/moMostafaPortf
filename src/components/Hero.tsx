@@ -1,12 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
@@ -17,7 +20,7 @@ export default function Hero() {
             className="space-y-8 lg:order-1"
           >
             <div className="space-y-4">
-              <motion.h1 
+              <motion.h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text)] leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -25,7 +28,7 @@ export default function Hero() {
               >
                 Mo Mostafa
               </motion.h1>
-              <motion.div 
+              <motion.div
                 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--primary)]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -33,18 +36,20 @@ export default function Hero() {
               >
                 DevOps Engineer
               </motion.div>
-              <motion.p 
+              <motion.p
                 className="text-lg text-[var(--muted)] max-w-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Passionate about building scalable infrastructure, automating deployments, and creating reliable systems that empower development teams to deliver exceptional software.
+                Passionate about building scalable infrastructure, automating
+                deployments, and creating reliable systems that empower
+                development teams to deliver exceptional software.
               </motion.p>
             </div>
 
             {/* CTAs */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -61,7 +66,7 @@ export default function Hero() {
                 <FiDownload className="w-4 h-4" />
                 Download CV
               </motion.a>
-              
+
               <div className="flex gap-3">
                 <motion.a
                   href="https://github.com"
@@ -75,7 +80,7 @@ export default function Hero() {
                 >
                   <FiGithub className="w-5 h-5" />
                 </motion.a>
-                
+
                 <motion.a
                   href="https://linkedin.com"
                   target="_blank"
@@ -88,7 +93,7 @@ export default function Hero() {
                 >
                   <FiLinkedin className="w-5 h-5" />
                 </motion.a>
-                
+
                 <motion.a
                   href="mailto:mo@example.com"
                   className="inline-flex items-center justify-center w-12 h-12 border border-gray-300 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
@@ -112,7 +117,7 @@ export default function Hero() {
           >
             {/* Background accent shape */}
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--secondary)]/5 to-[var(--accent)]/5 rounded-2xl transform rotate-3 scale-105"></div>
-            
+
             {/* Image container */}
             <div className="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-8 transform -rotate-1">
               <motion.div

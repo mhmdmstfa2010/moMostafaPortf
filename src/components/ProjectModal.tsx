@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { useEffect } from 'react';
-import { FiX, FiGithub, FiExternalLink } from 'react-icons/fi';
-import { Project } from '../data/projects';
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { useEffect } from "react";
+import { FiX, FiGithub, FiExternalLink } from "react-icons/fi";
+import { Project } from "../data/projects";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -14,40 +14,44 @@ interface ProjectModalProps {
 
 const modalVariants = {
   hidden: { opacity: 0, scale: 0.98 },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
-    transition: { duration: 0.28 }
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.28 },
   },
-  exit: { 
-    opacity: 0, 
-    scale: 0.98, 
-    transition: { duration: 0.18 }
-  }
+  exit: {
+    opacity: 0,
+    scale: 0.98,
+    transition: { duration: 0.18 },
+  },
 };
 
 const overlayVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
-  exit: { opacity: 0 }
+  exit: { opacity: 0 },
 };
 
-export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+export default function ProjectModal({
+  project,
+  isOpen,
+  onClose,
+}: ProjectModalProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
@@ -81,7 +85,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           >
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-              <h2 id="modal-title" className="text-2xl font-bold text-[var(--text)]">
+              <h2
+                id="modal-title"
+                className="text-2xl font-bold text-[var(--text)]"
+              >
                 {project.title}
               </h2>
               <button
@@ -180,7 +187,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   <FiGithub className="w-4 h-4" />
                   View Repository
                 </a>
-                
+
                 <a
                   href={project.details.live}
                   target="_blank"

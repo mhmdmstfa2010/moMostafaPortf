@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ export default function Footer() {
             >
               <FiGithub className="w-5 h-5" />
             </motion.a>
-            
+
             <motion.a
               href="https://linkedin.com"
               target="_blank"
@@ -55,7 +55,7 @@ export default function Footer() {
             >
               <FiLinkedin className="w-5 h-5" />
             </motion.a>
-            
+
             <motion.a
               href="mailto:mo@example.com"
               className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[var(--primary)]"
