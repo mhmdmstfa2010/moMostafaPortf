@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--bg)]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text)] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
             Let&apos;s Work Together
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
@@ -76,7 +76,7 @@ export default function Contact() {
               </h3>
 
               {/* Email */}
-              <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+              <div className="flex items-center gap-4 p-4 bg-[var(--card)] rounded-xl border border-[var(--primary)]/10 shadow-sm">
                 <div className="w-10 h-10 bg-[var(--secondary)]/10 rounded-lg flex items-center justify-center">
                   <FiMail className="w-5 h-5 text-[var(--secondary)]" />
                 </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                 </div>
                 <button
                   onClick={copyEmail}
-                  className="p-2 text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-gray-100 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="p-2 text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-[var(--primary)]/5 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
                   aria-label="Copy email address"
                 >
                   {emailCopied ? (
@@ -108,7 +108,7 @@ export default function Contact() {
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 bg-white border border-gray-200 text-[var(--muted)] rounded-lg hover:border-[var(--secondary)] hover:text-[var(--secondary)] hover:bg-[var(--secondary)]/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 bg-[var(--card)] border border-[var(--primary)]/10 text-[var(--muted)] rounded-lg hover:border-[var(--secondary)] hover:text-[var(--secondary)] hover:bg-[var(--secondary)]/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label="GitHub Profile"
@@ -120,7 +120,7 @@ export default function Contact() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 bg-white border border-gray-200 text-[var(--muted)] rounded-lg hover:border-[var(--secondary)] hover:text-[var(--secondary)] hover:bg-[var(--secondary)]/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 bg-[var(--card)] border border-[var(--primary)]/10 text-[var(--muted)] rounded-lg hover:border-[var(--secondary)] hover:text-[var(--secondary)] hover:bg-[var(--secondary)]/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label="LinkedIn Profile"
@@ -165,7 +165,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)]"
+                  className="w-full px-4 py-3 border border-[var(--primary)]/10 rounded-lg focus:ring-2 focus:ring-[var(--primary)]/40 focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)]"
                   placeholder="Your name"
                 />
               </div>
@@ -184,7 +184,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)]"
+                  className="w-full px-4 py-3 border border-[var(--primary)]/10 rounded-lg focus:ring-2 focus:ring-[var(--primary)]/40 focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)]"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -203,14 +203,14 @@ export default function Contact() {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)] resize-vertical"
+                  className="w-full px-4 py-3 border border-[var(--primary)]/10 rounded-lg focus:ring-2 focus:ring-[var(--primary)]/40 focus:border-transparent transition-colors duration-200 text-[var(--text)] placeholder-[var(--muted)] resize-vertical"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
 
               <motion.button
                 type="submit"
-                className="w-full bg-[var(--secondary)] text-white font-medium py-3 px-6 rounded-lg hover:bg-[var(--primary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                className="w-full bg-[var(--secondary)] text-white font-medium py-3 px-6 rounded-lg hover:bg-[var(--primary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

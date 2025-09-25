@@ -98,10 +98,10 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
             Technical Skills
           </h2>
-          <p className="text-lg text-muted max-w-3xl mx-auto">
+          <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
             Comprehensive expertise in modern DevOps practices, cloud
             technologies, and infrastructure automation
           </p>
@@ -115,9 +115,9 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
-              className="p-4 bg-card rounded-xl border border-primary/8 shadow-sm"
+              className="p-4 bg-[var(--card)] rounded-xl border border-[var(--primary)]/8 shadow-sm"
             >
-              <h3 className="text-xl font-semibold text-text mb-6">
+              <h3 className="text-xl font-semibold text-[var(--text)] mb-6">
                 {group.title}
               </h3>
 
@@ -136,12 +136,12 @@ export default function Skills() {
                   >
                     <div className="flex items-center gap-3 flex-1">
                       <div
-                        className="w-6 h-6 flex items-center justify-center text-secondary text-xl"
+                        className="w-6 h-6 flex items-center justify-center text-[var(--secondary)] text-xl"
                         aria-hidden="true"
                       >
                         {skill.icon}
                       </div>
-                      <span className="text-sm font-medium text-text">
+                      <span className="text-sm font-medium text-[var(--text)]">
                         {skill.name}
                       </span>
                     </div>

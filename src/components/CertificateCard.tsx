@@ -22,7 +22,7 @@ export default function CertificateCard({
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ scale: 1.05, y: -4 }}
-      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer"
+      className="bg-[var(--card)] rounded-xl shadow-sm border border-[var(--primary)]/10 overflow-hidden cursor-pointer"
       onClick={() => onOpen(certificate.id)}
     >
       <div className="relative h-40 bg-gradient-to-br from-[var(--primary)]/10 to-[var(--accent)]/10 flex items-center justify-center">
@@ -35,7 +35,7 @@ export default function CertificateCard({
         />
       </div>
 
-      <div className="p-4">
+      <div className="p-3">
         <h3 className="font-semibold text-[var(--text)] text-sm mb-2 leading-tight">
           {certificate.name}
         </h3>

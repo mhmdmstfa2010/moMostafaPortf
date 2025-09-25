@@ -43,48 +43,76 @@ export default function NavBar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-primary/10">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[min(96%,1100px)] rounded-2xl bg-white/80 backdrop-blur-md border border-primary/10 shadow-[0_8px_30px_rgba(30,58,138,0.06)]"
+      role="banner"
+    >
+      <nav
+        className="mx-auto px-4 sm:px-6 lg:px-8"
+        role="navigation"
+        aria-label="Main Navigation"
+      >
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link
-            href="#hero"
+          <button
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
+            className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded-md"
+            aria-label="Go to home"
           >
             <motion.div
-              className="text-xl font-bold text-primary cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.15 }}
+              className="flex items-center gap-3"
             >
-              Mo Mostafa
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-white font-semibold">
+                MM
+              </span>
+              <div className="hidden sm:block text-sm">
+                <div className="text-text font-semibold">Mo Mostafa</div>
+                <div className="text-xs text-muted -mt-0.5">
+                  DevOps Engineer
+                </div>
+              </div>
             </motion.div>
-          </Link>
+          </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-secondary ${
-                  activeSection === item.href.slice(1)
-                    ? "text-secondary"
-                    : "text-muted"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-4">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.slice(1);
+              return (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                    isActive
+                      ? "bg-primary text-white shadow-md"
+                      : "text-text hover:text-primary hover:bg-primary/5"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                  {/* active underline (subtle) */}
+                  <span
+                    className={`absolute left-2 right-2 -bottom-2 h-1 rounded-full transition-all duration-300 ${
+                      isActive ? "bg-secondary opacity-90" : "bg-transparent"
+                    }`}
+                    aria-hidden
+                  />
+                </button>
+              );
+            })}
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-muted hover:text-secondary"
-            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-md text-text hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            onClick={() => setIsOpen((s) => !s)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             <svg
               className="w-6 h-6"
@@ -118,23 +146,44 @@ export default function NavBar() {
             height: isOpen ? "auto" : 0,
             opacity: isOpen ? 1 : 0,
           }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-white border-t border-primary/10"
+          transition={{ duration: 0.28 }}
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-sm border-t border-primary/8"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
-                  activeSection === item.href.slice(1)
-                    ? "text-secondary bg-primary/5"
-                    : "text-muted hover:text-secondary hover:bg-primary/5"
-                }`}
+          <div className="px-4 pt-4 pb-6 space-y-2">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.slice(1);
+              return (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "text-text hover:text-primary hover:bg-primary/5"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+            {/* small socials row (optional) */}
+            <div className="pt-2 border-t border-primary/6 mt-2 flex items-center gap-3">
+              <Link
+                href="https://github.com/youseif-elshreif"
+                onClick={(e) => e}
+                className="text-sm text-muted hover:text-primary"
               >
-                {item.label}
-              </button>
-            ))}
+                GitHub
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/youseif-elshreif-2930a6227"
+                onClick={(e) => e}
+                className="text-sm text-muted hover:text-primary"
+              >
+                LinkedIn
+              </Link>
+            </div>
           </div>
         </motion.div>
       </nav>

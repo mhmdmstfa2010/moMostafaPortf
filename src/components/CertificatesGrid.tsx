@@ -26,10 +26,7 @@ export default function CertificatesGrid() {
   };
 
   return (
-    <section
-      id="certificates"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--bg)]"
-    >
+    <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +35,7 @@ export default function CertificatesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text)] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
             Certifications
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
@@ -77,13 +74,13 @@ export default function CertificatesGrid() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="relative bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+                className="relative bg-[var(--card)] rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="lightbox-title"
               >
                 {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-gray-100">
+                <div className="flex items-center justify-between p-4 border-b border-[var(--primary)]/10">
                   <h3
                     id="lightbox-title"
                     className="text-lg font-semibold text-[var(--text)]"
@@ -92,7 +89,7 @@ export default function CertificatesGrid() {
                   </h3>
                   <button
                     onClick={handleCloseLightbox}
-                    className="p-2 text-[var(--muted)] hover:text-[var(--text)] hover:bg-gray-100 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                    className="p-2 text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--primary)]/5 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
                     aria-label="Close lightbox"
                   >
                     <FiX className="w-5 h-5" />
