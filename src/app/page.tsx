@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 import ProjectsGrid from "../components/ProjectsGrid";
 import CertificatesGrid from "../components/CertificatesGrid";
 import Footer from "../components/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <Skills />
+        <Experience />
         <ProjectsGrid />
         <CertificatesGrid />
       </main>

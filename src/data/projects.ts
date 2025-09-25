@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     id: "ci-cd-microservices",
     title: "Automated CI/CD for Microservices",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["GitHub Actions", "Docker", "Kubernetes", "Terraform"],
     short:
       "End-to-end CI/CD pipeline with infrastructure automation for microservices architecture",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     id: "aws-infrastructure",
     title: "Scalable AWS Infrastructure",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["AWS", "Terraform", "CloudFormation", "Auto Scaling"],
     short:
       "Multi-tier AWS infrastructure with auto-scaling and disaster recovery",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: "monitoring-observability",
     title: "Comprehensive Monitoring Stack",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["Prometheus", "Grafana", "ELK Stack", "Jaeger"],
     short:
       "Full observability platform with metrics, logs, and distributed tracing",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   {
     id: "kubernetes-platform",
     title: "Enterprise Kubernetes Platform",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["Kubernetes", "Helm", "Istio", "ArgoCD"],
     short: "Production-ready Kubernetes platform with service mesh and GitOps",
     details: {
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     id: "security-compliance",
     title: "Security & Compliance Automation",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["AWS Config", "CloudTrail", "Security Hub", "Terraform"],
     short: "Automated security compliance and governance framework",
     details: {
@@ -111,7 +111,7 @@ export const projects: Project[] = [
   {
     id: "backup-disaster-recovery",
     title: "Multi-Cloud Backup & DR",
-    image: "/images/placeholder-project.png",
+    image: "/images/me.jpg",
     tech: ["AWS Backup", "Azure", "Veeam", "Terraform"],
     short: "Cross-cloud backup and disaster recovery solution",
     details: {

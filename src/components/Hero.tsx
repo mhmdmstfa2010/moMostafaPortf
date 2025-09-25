@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import pic from "../../public/images/me.jpg";
 
 export default function Hero() {
   return (
@@ -126,7 +127,7 @@ export default function Hero() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/images/placeholder-profile.png"
+                  src={pic}
                   alt="Mo Mostafa - DevOps Engineer"
                   width={400}
                   height={400}

@@ -25,13 +25,13 @@ export default function CertificateCard({
       className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_8px_30px_rgba(30,58,138,0.08)] hover:shadow-[0_16px_40px_rgba(30,58,138,0.15)] border border-blue-200/50 overflow-hidden cursor-pointer transition-all duration-300"
       onClick={() => onOpen(certificate.id)}
     >
-      <div className="relative h-40 bg-gradient-to-br from-blue-100/80 to-indigo-100/60 flex items-center justify-center">
+      <div className="relative h-40 bg-gradient-to-br from-blue-100/80 to-indigo-100/60 flex items-center justify-center overflow-hidden">
         <Image
           src={certificate.image}
           alt={`${certificate.name} certificate`}
           width={120}
           height={120}
-          className="w-24 h-24 object-contain"
+          className="w-full h-auto"
         />
       </div>
 
