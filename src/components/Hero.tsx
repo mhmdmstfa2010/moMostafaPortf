@@ -21,7 +21,7 @@ export default function Hero() {
           >
             <div className="space-y-4">
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text)] leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -29,7 +29,7 @@ export default function Hero() {
                 Mo Mostafa
               </motion.h1>
               <motion.div
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--primary)]"
+                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ export default function Hero() {
                 DevOps Engineer
               </motion.div>
               <motion.p
-                className="text-lg text-[var(--muted)] max-w-2xl leading-relaxed"
+                className="text-lg text-muted max-w-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -58,7 +58,7 @@ export default function Hero() {
               <motion.a
                 href="/cv.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--secondary)] text-white font-medium rounded-md hover:bg-[var(--primary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-secondary text-white font-medium rounded-md hover:bg-secondary/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.18 }}
@@ -72,7 +72,7 @@ export default function Hero() {
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-gray-300 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 border border-primary/20 text-muted rounded-md hover:border-secondary hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}
@@ -85,7 +85,7 @@ export default function Hero() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-gray-300 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 border border-primary/20 text-muted rounded-md hover:border-secondary hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}
@@ -96,7 +96,7 @@ export default function Hero() {
 
                 <motion.a
                   href="mailto:mo@example.com"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-gray-300 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 border border-primary/20 text-muted rounded-md hover:border-secondary hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}
@@ -115,11 +115,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative lg:order-2"
           >
-            {/* Background accent shape */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--secondary)]/5 to-[var(--accent)]/5 rounded-2xl transform rotate-3 scale-105"></div>
+            {/* Enhanced blue background panel */}
+            <div className="absolute inset-0 bg-primary/8 rounded-2xl transform rotate-3 scale-105"></div>
 
             {/* Image container */}
-            <div className="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-8 transform -rotate-1">
+            <div className="relative bg-card rounded-2xl shadow-float-lg border border-primary/10 p-8 transform -rotate-1">
               <motion.div
                 className="relative aspect-square max-w-sm mx-auto"
                 whileHover={{ scale: 1.02 }}

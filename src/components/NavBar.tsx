@@ -43,7 +43,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-primary/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -55,7 +55,7 @@ export default function NavBar() {
             }}
           >
             <motion.div
-              className="text-xl font-bold text-[var(--primary)] cursor-pointer"
+              className="text-xl font-bold text-primary cursor-pointer"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
@@ -69,10 +69,10 @@ export default function NavBar() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-[var(--secondary)] ${
+                className={`text-sm font-medium transition-colors duration-200 hover:text-secondary ${
                   activeSection === item.href.slice(1)
-                    ? "text-[var(--secondary)]"
-                    : "text-[var(--muted)]"
+                    ? "text-secondary"
+                    : "text-muted"
                 }`}
               >
                 {item.label}
@@ -82,7 +82,7 @@ export default function NavBar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-[var(--muted)] hover:text-[var(--secondary)]"
+            className="md:hidden p-2 text-muted hover:text-secondary"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -119,7 +119,7 @@ export default function NavBar() {
             opacity: isOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-white border-t border-gray-100"
+          className="md:hidden overflow-hidden bg-white border-t border-primary/10"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
@@ -128,8 +128,8 @@ export default function NavBar() {
                 onClick={() => scrollToSection(item.href)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
                   activeSection === item.href.slice(1)
-                    ? "text-[var(--secondary)] bg-blue-50"
-                    : "text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-gray-50"
+                    ? "text-secondary bg-primary/5"
+                    : "text-muted hover:text-secondary hover:bg-primary/5"
                 }`}
               >
                 {item.label}

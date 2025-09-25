@@ -24,7 +24,7 @@ export default function ProjectsGrid() {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-bg">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,10 +33,10 @@ export default function ProjectsGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text)] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             A selection of DevOps and infrastructure projects that showcase my
             expertise in automation, scalability, and reliability
           </p>
