@@ -25,8 +25,7 @@ export default function ProjectCard({
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
-        whileHover={{ scale: 1.03, y: -8 }}
+        whileHover={{ scale: 1.03 }}
         className="relative bg-white/90 backdrop-blur-sm rounded-3xl border border-blue-200/50 shadow-[0_16px_40px_rgba(30,58,138,0.12)] hover:shadow-[0_24px_60px_rgba(30,58,138,0.18)] overflow-hidden cursor-pointer group transition-all duration-500"
         onClick={() => onOpen(project.id)}
       >
@@ -39,7 +38,7 @@ export default function ProjectCard({
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 via-blue-800/10 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-indigo-800/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-indigo-800/20 opacity-0 group-hover:opacity-100 transition-all " />
         </div>
 
         <div className="p-6">

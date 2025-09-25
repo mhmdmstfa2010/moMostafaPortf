@@ -20,7 +20,6 @@ export default function CertificateCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ scale: 1.05, y: -6 }}
       className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_8px_30px_rgba(30,58,138,0.08)] hover:shadow-[0_16px_40px_rgba(30,58,138,0.15)] border border-blue-200/50 overflow-hidden cursor-pointer transition-all duration-300"
       onClick={() => onOpen(certificate.id)}
