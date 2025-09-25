@@ -67,12 +67,12 @@ export default function NavBar() {
               transition={{ duration: 0.15 }}
               className="flex items-center gap-3"
             >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-white font-semibold">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-blue-900 to-indigo-800 text-white font-semibold shadow-lg">
                 MM
               </span>
               <div className="hidden sm:block text-sm">
-                <div className="text-text font-semibold">Mo Mostafa</div>
-                <div className="text-xs text-muted -mt-0.5">
+                <div className="text-slate-800 font-semibold">Mo Mostafa</div>
+                <div className="text-xs text-slate-600 -mt-0.5">
                   DevOps Engineer
                 </div>
               </div>
@@ -87,10 +87,10 @@ export default function NavBar() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 ${
                     isActive
-                      ? "bg-primary text-white shadow-md"
-                      : "text-text hover:text-primary hover:bg-primary/5"
+                      ? "bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg shadow-blue-500/25"
+                      : "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -98,7 +98,9 @@ export default function NavBar() {
                   {/* active underline (subtle) */}
                   <span
                     className={`absolute left-2 right-2 -bottom-2 h-1 rounded-full transition-all duration-300 ${
-                      isActive ? "bg-secondary opacity-90" : "bg-transparent"
+                      isActive
+                        ? "bg-gradient-to-r from-blue-600 to-indigo-600 opacity-90"
+                        : "bg-transparent"
                     }`}
                     aria-hidden
                   />
@@ -109,7 +111,7 @@ export default function NavBar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-text hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            className="md:hidden p-2 rounded-md text-slate-700 hover:text-blue-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40"
             onClick={() => setIsOpen((s) => !s)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -147,7 +149,7 @@ export default function NavBar() {
             opacity: isOpen ? 1 : 0,
           }}
           transition={{ duration: 0.28 }}
-          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-sm border-t border-primary/8"
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-sm border-t border-blue-200/30"
         >
           <div className="px-4 pt-4 pb-6 space-y-2">
             {navItems.map((item) => {
@@ -156,10 +158,10 @@ export default function NavBar() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 ${
                     isActive
-                      ? "bg-primary text-white"
-                      : "text-text hover:text-primary hover:bg-primary/5"
+                      ? "bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg"
+                      : "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -168,18 +170,18 @@ export default function NavBar() {
               );
             })}
             {/* small socials row (optional) */}
-            <div className="pt-2 border-t border-primary/6 mt-2 flex items-center gap-3">
+            <div className="pt-2 border-t border-blue-200/30 mt-2 flex items-center gap-3">
               <Link
                 href="https://github.com/youseif-elshreif"
                 onClick={(e) => e}
-                className="text-sm text-muted hover:text-primary"
+                className="text-sm text-slate-600 hover:text-blue-700"
               >
                 GitHub
               </Link>
               <Link
                 href="https://www.linkedin.com/in/youseif-elshreif-2930a6227"
                 onClick={(e) => e}
-                className="text-sm text-muted hover:text-primary"
+                className="text-sm text-slate-600 hover:text-blue-700"
               >
                 LinkedIn
               </Link>

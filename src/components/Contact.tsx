@@ -43,7 +43,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--bg)]">
+    <section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,10 +55,16 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
-            Let&apos;s Work Together
-          </h2>
-          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-4">
+              Let&apos;s Work Together
+            </h2>
+          </motion.div>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Interested in discussing DevOps opportunities, infrastructure
             challenges, or collaboration? I&apos;d love to hear from you.
           </p>
@@ -71,22 +80,22 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-semibold text-[var(--text)] mb-6">
+              <h3 className="text-xl font-semibold text-slate-800 mb-6">
                 Get in Touch
               </h3>
 
               {/* Email */}
-              <div className="flex items-center gap-4 p-4 bg-[var(--card)] rounded-xl border border-[var(--primary)]/10 shadow-sm">
-                <div className="w-10 h-10 bg-[var(--secondary)]/10 rounded-lg flex items-center justify-center">
-                  <FiMail className="w-5 h-5 text-[var(--secondary)]" />
+              <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-xl border border-blue-200/50 shadow-[0_8px_30px_rgba(30,58,138,0.08)]">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                  <FiMail className="w-5 h-5 text-blue-700" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-[var(--text)]">Email</p>
-                  <p className="text-[var(--muted)] text-sm">mo@example.com</p>
+                  <p className="font-medium text-slate-800">Email</p>
+                  <p className="text-slate-600 text-sm">mo@example.com</p>
                 </div>
                 <button
                   onClick={copyEmail}
-                  className="p-2 text-[var(--muted)] hover:text-[var(--secondary)] hover:bg-[var(--primary)]/5 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
+                  className="p-2 text-slate-500 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2"
                   aria-label="Copy email address"
                 >
                   {emailCopied ? (
@@ -100,7 +109,7 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-[var(--text)] mb-4">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4">
                 Connect with Me
               </h4>
               <div className="flex gap-4">
@@ -108,7 +117,7 @@ export default function Contact() {
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 bg-[var(--card)] border border-[var(--primary)]/10 text-[var(--muted)] rounded-lg hover:border-[var(--secondary)] hover:text-[var(--secondary)] hover:bg-[var(--secondary)]/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/40 focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-12 h-12 bg-white/90 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2 transform hover:scale-110"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label="GitHub Profile"

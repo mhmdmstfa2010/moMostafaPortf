@@ -26,7 +26,10 @@ export default function CertificatesGrid() {
   };
 
   return (
-    <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="certificates"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,10 +38,16 @@ export default function CertificatesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
-            Certifications
-          </h2>
-          <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-4">
+              Certifications
+            </h2>
+          </motion.div>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Professional certifications that validate my expertise in cloud
             platforms, DevOps tools, and modern infrastructure practices
           </p>

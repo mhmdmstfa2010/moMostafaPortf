@@ -21,7 +21,7 @@ export default function Hero() {
           >
             <div className="space-y-4">
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text)] leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -29,7 +29,7 @@ export default function Hero() {
                 Mo Mostafa
               </motion.h1>
               <motion.div
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--primary)]"
+                className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ export default function Hero() {
                 DevOps Engineer
               </motion.div>
               <motion.p
-                className="text-lg text-[var(--muted)] max-w-2xl leading-relaxed"
+                className="text-lg text-slate-600 max-w-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -58,7 +58,7 @@ export default function Hero() {
               <motion.a
                 href="/cv.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[var(--secondary)] text-white font-medium rounded-md hover:bg-[var(--secondary)]/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/50"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-900 to-indigo-800 text-white font-medium rounded-full hover:from-blue-800 hover:to-indigo-700 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-105"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.18 }}
@@ -72,7 +72,7 @@ export default function Hero() {
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-[var(--primary)]/20 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/50"
+                  className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-110"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}
@@ -85,7 +85,7 @@ export default function Hero() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-[var(--primary)]/20 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/50"
+                  className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-110"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}
@@ -96,7 +96,7 @@ export default function Hero() {
 
                 <motion.a
                   href="mailto:mo@example.com"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-[var(--primary)]/20 text-[var(--muted)] rounded-md hover:border-[var(--secondary)] hover:text-[var(--secondary)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/50"
+                  className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-110"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.18 }}

@@ -16,6 +16,19 @@ import {
   FiZap,
 } from "react-icons/fi";
 
+const getLevelColor = (level: "Expert" | "Advanced" | "Intermediate") => {
+  switch (level) {
+    case "Expert":
+      return "bg-gradient-to-r from-blue-900 to-indigo-800 text-white";
+    case "Advanced":
+      return "bg-gradient-to-r from-blue-700 to-blue-800 text-white";
+    case "Intermediate":
+      return "bg-gradient-to-r from-blue-500 to-blue-600 text-white";
+    default:
+      return "bg-gradient-to-r from-slate-500 to-slate-600 text-white";
+  }
+};
+
 interface Skill {
   name: string;
   icon: React.ReactNode;
@@ -74,22 +87,12 @@ const skillGroups: SkillGroup[] = [
   },
 ];
 
-const getLevelColor = (level: string) => {
-  switch (level) {
-    case "Expert":
-      return "bg-green-100 text-green-800";
-    case "Advanced":
-      return "bg-blue-100 text-blue-800";
-    case "Intermediate":
-      return "bg-yellow-100 text-yellow-800";
-    default:
-      return "bg-gray-100 text-gray-800";
-  }
-};
-
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="skills"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,10 +101,16 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--primary)] mb-4">
-            Technical Skills
-          </h2>
-          <p className="text-lg text-[var(--muted)] max-w-3xl mx-auto">
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-4">
+              Technical Skills
+            </h2>
+          </motion.div>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive expertise in modern DevOps practices, cloud
             technologies, and infrastructure automation
           </p>
@@ -115,9 +124,9 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
-              className="p-4 bg-[var(--card)] rounded-xl border border-[var(--primary)]/8 shadow-sm"
+              className="p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-200/50 shadow-[0_8px_30px_rgba(30,58,138,0.08)] hover:shadow-[0_12px_40px_rgba(30,58,138,0.12)] transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-[var(--text)] mb-6">
+              <h3 className="text-xl font-semibold text-slate-800 mb-6">
                 {group.title}
               </h3>
 
@@ -132,16 +141,16 @@ export default function Skills() {
                       duration: 0.4,
                       delay: groupIndex * 0.1 + skillIndex * 0.05,
                     }}
-                    className="flex items-center gap-3 p-2 rounded-md bg-white/60 border border-gray-100"
+                    className="flex items-center gap-3 p-3 rounded-lg bg-white/80 border border-blue-100/50 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 flex-1">
                       <div
-                        className="w-6 h-6 flex items-center justify-center text-[var(--secondary)] text-xl"
+                        className="w-6 h-6 flex items-center justify-center text-blue-700 text-xl"
                         aria-hidden="true"
                       >
                         {skill.icon}
                       </div>
-                      <span className="text-sm font-medium text-[var(--text)]">
+                      <span className="text-sm font-medium text-slate-700">
                         {skill.name}
                       </span>
                     </div>
