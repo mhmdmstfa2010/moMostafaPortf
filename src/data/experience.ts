@@ -19,12 +19,13 @@ export const experiences: Experience[] = [
     location: "Remote",
     startDate: "2022-01",
     endDate: null, // Current position
-    description: "Leading DevOps initiatives for cloud infrastructure and CI/CD pipeline optimization.",
+    description:
+      "Leading DevOps initiatives for cloud infrastructure and CI/CD pipeline optimization.",
     achievements: [
       "Reduced deployment time by 80% through automated CI/CD pipelines",
       "Managed multi-cloud infrastructure serving 1M+ users",
       "Implemented monitoring solutions reducing downtime by 95%",
-      "Led a team of 5 DevOps engineers"
+      "Led a team of 5 DevOps engineers",
     ],
     technologies: [
       "AWS",
@@ -33,9 +34,9 @@ export const experiences: Experience[] = [
       "Terraform",
       "Jenkins",
       "Prometheus",
-      "Grafana"
+      "Grafana",
     ],
-    type: "full-time"
+    type: "full-time",
   },
   {
     id: "exp-2",
@@ -44,12 +45,13 @@ export const experiences: Experience[] = [
     location: "Cairo, Egypt",
     startDate: "2020-03",
     endDate: "2021-12",
-    description: "Focused on containerization and infrastructure automation for enterprise clients.",
+    description:
+      "Focused on containerization and infrastructure automation for enterprise clients.",
     achievements: [
       "Migrated 50+ applications to containerized environments",
       "Implemented Infrastructure as Code reducing provisioning time by 70%",
       "Set up comprehensive monitoring and alerting systems",
-      "Improved system reliability to 99.9% uptime"
+      "Improved system reliability to 99.9% uptime",
     ],
     technologies: [
       "Docker",
@@ -58,9 +60,9 @@ export const experiences: Experience[] = [
       "Ansible",
       "GitLab CI",
       "ELK Stack",
-      "Python"
+      "Python",
     ],
-    type: "full-time"
+    type: "full-time",
   },
   {
     id: "exp-3",
@@ -69,22 +71,15 @@ export const experiences: Experience[] = [
     location: "Alexandria, Egypt",
     startDate: "2018-06",
     endDate: "2020-02",
-    description: "Started my DevOps journey working on cloud migration and automation projects.",
+    description:
+      "Started my DevOps journey working on cloud migration and automation projects.",
     achievements: [
       "Automated deployment processes for 20+ microservices",
       "Migrated legacy applications to AWS cloud",
       "Implemented backup and disaster recovery solutions",
-      "Contributed to reducing infrastructure costs by 40%"
+      "Contributed to reducing infrastructure costs by 40%",
     ],
-    technologies: [
-      "AWS",
-      "Linux",
-      "Bash",
-      "Git",
-      "MySQL",
-      "Apache",
-      "Nginx"
-    ],
-    type: "full-time"
-  }
+    technologies: ["AWS", "Linux", "Bash", "Git", "MySQL", "Apache", "Nginx"],
+    type: "full-time",
+  },
 ];

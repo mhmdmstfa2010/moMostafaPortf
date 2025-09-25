@@ -45,7 +45,7 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
       <div className="absolute -left-4 top-8 w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
         <FiBriefcase className="w-3 h-3 text-white" />
       </div>
-      
+
       {/* Header */}
       <div className="mb-4">
         <div className="flex items-start justify-between mb-2">
@@ -94,7 +94,10 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
         </h4>
         <ul className="space-y-1">
           {experience.achievements.map((achievement, idx) => (
-            <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+            <li
+              key={idx}
+              className="text-sm text-slate-600 flex items-start gap-2"
+            >
               <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
               {achievement}
             </li>
