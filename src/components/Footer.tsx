@@ -24,7 +24,9 @@ export default function Footer() {
                 MM
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Mo Mostafa</h3>
+                <h3 className="text-xl font-bold text-white">
+                  mohamed mostafa
+                </h3>
                 <p className="text-slate-400 text-sm">DevOps Engineer</p>
               </div>
             </div>
@@ -114,7 +116,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-slate-400 text-sm"
             >
-              © {currentYear} Mo Mostafa. All rights reserved.
+              © {currentYear} mohamed mostafa. All rights reserved.
             </motion.p>
 
             <motion.div

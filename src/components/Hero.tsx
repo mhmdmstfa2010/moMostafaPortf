@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-22 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -17,7 +17,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            transition={{ duration: 0.6 }}
             className="space-y-8 lg:order-1"
           >
             <div className="space-y-4">
@@ -27,7 +27,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                Mo Mostafa
+                mohamed mostafa
               </motion.h1>
               <motion.div
                 className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent"
@@ -128,7 +128,7 @@ export default function Hero() {
               >
                 <Image
                   src={pic}
-                  alt="Mo Mostafa - DevOps Engineer"
+                  alt="mohamed mostafa - DevOps Engineer"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover rounded-xl"
