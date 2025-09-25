@@ -69,7 +69,7 @@ export default function ProjectCard({
             </div>
 
             <button
-              className="ml-3 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-900 to-indigo-800 text-white text-sm font-medium hover:from-blue-800 hover:to-indigo-700 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-105"
+              className="cursor-pointer ml-3 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-900 to-indigo-800 text-white text-sm font-medium hover:from-blue-800 hover:to-indigo-700 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transform hover:scale-105"
               onClick={(e) => {
                 e.stopPropagation();
                 onOpen(project.id);

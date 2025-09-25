@@ -71,14 +71,14 @@ export default function NavBar() {
         role="navigation"
         aria-label="Main Navigation"
       >
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 ">
           {/* Logo */}
           <button
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
-            className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded-md"
+            className="cursor-pointer flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded-md"
             aria-label="Go to home"
           >
             <motion.div
@@ -110,7 +110,7 @@ export default function NavBar() {
                     isActive
                       ? "bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg shadow-blue-500/25"
                       : "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
-                  }`}
+                  } cursor-pointer`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
@@ -181,7 +181,7 @@ export default function NavBar() {
                     isActive
                       ? "bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg"
                       : "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
-                  }`}
+                  } cursor-pointer`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}

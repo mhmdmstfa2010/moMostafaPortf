@@ -101,7 +101,7 @@ export default function ProjectModal({
                 whileTap={{ scale: 0.95 }}
                 aria-label="Close modal"
               >
-                <FiX className="w-6 h-6" />
+                <FiX className="w-6 h-6 cursor-pointer" />
               </motion.button>
             </div>
 
