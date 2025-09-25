@@ -40,7 +40,7 @@ export default function NavBar() {
 
     // Add scroll listener
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -48,15 +48,16 @@ export default function NavBar() {
     const target = document.querySelector(href);
     if (target) {
       // Get the target's position
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset;
       // Offset for fixed navbar (adjust as needed)
       const offset = 80;
-      
+
       window.scrollTo({
         top: targetPosition - offset,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
-      
+
       // Update active section immediately for better UX
       setActiveSection(href.slice(1));
     }
