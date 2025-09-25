@@ -57,9 +57,6 @@ export default function NavBar() {
         top: targetPosition - offset,
         behavior: "smooth",
       });
-
-      // Update active section immediately for better UX
-      setActiveSection(href.slice(1));
     }
     setIsOpen(false);
   };

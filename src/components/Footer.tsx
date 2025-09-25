@@ -29,7 +29,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Building scalable infrastructure and automating deployments to empower development teams.
+              Building scalable infrastructure and automating deployments to
+              empower development teams.
             </p>
           </motion.div>
 
@@ -122,17 +123,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex items-center gap-2 text-slate-400 text-sm"
-            >
-              <span>Built with</span>
-              <div className="flex items-center gap-1">
-                {["Next.js", "TypeScript", "Tailwind CSS"].map((tech, index) => (
-                  <span key={tech} className="flex items-center">
-                    <span className="text-blue-400 font-medium">{tech}</span>
-                    {index < 2 && <span className="mx-1 text-slate-500">•</span>}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+            ></motion.div>
           </div>
         </div>
       </div>

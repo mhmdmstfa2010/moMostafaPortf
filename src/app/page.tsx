@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import ProjectsGrid from "../components/ProjectsGrid";
 import CertificatesGrid from "../components/CertificatesGrid";
-import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
         <Skills />
         <ProjectsGrid />
         <CertificatesGrid />
-        <Contact />
       </main>
       <Footer />
     </div>
