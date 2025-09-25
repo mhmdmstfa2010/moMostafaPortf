@@ -10,6 +10,7 @@ const navItems = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#certificates", label: "Certificates" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function NavBar() {
@@ -101,7 +102,7 @@ export default function NavBar() {
           </button>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = activeSection === item.href.slice(1);
               return (
