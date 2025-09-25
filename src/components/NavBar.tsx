@@ -17,27 +17,48 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollPosition = window.scrollY + 100; // Offset for navbar
 
-    const sections = document.querySelectorAll("section[id]");
-    sections.forEach((section) => observer.observe(section));
+      sections.forEach((section) => {
+        const element = section as HTMLElement;
+        const offsetTop = element.offsetTop;
+        const offsetHeight = element.offsetHeight;
 
-    return () => observer.disconnect();
+        if (
+          scrollPosition >= offsetTop &&
+          scrollPosition < offsetTop + offsetHeight
+        ) {
+          setActiveSection(element.id);
+        }
+      });
+    };
+
+    // Initial check
+    handleScroll();
+
+    // Add scroll listener
+    window.addEventListener("scroll", handleScroll);
+    
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href: string) => {
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      // Get the target's position
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      // Offset for fixed navbar (adjust as needed)
+      const offset = 80;
+      
+      window.scrollTo({
+        top: targetPosition - offset,
+        behavior: 'smooth'
+      });
+      
+      // Update active section immediately for better UX
+      setActiveSection(href.slice(1));
     }
     setIsOpen(false);
   };
