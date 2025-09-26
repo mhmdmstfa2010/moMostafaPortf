@@ -90,7 +90,7 @@ export default function NavBar() {
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-blue-900 to-indigo-800 text-white font-semibold shadow-lg">
                 MM
               </span>
-              <div className="hidden sm:block text-sm flex flex-col text-left">
+              <div className="sm:block text-sm flex flex-col text-left">
                 <div className="text-slate-800 font-semibold">
                   mohamed mostafa
                 </div>

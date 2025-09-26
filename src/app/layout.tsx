@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems. Expert in AWS, Kubernetes, Terraform, and modern DevOps practices.",
   keywords:
     "DevOps, Cloud Infrastructure, AWS, Kubernetes, Terraform, CI/CD, Automation, Infrastructure as Code",
-  authors: [{ name: "mohamed mostafa" }],
+  icons: "/images/icon.png",
   openGraph: {
     title: "mohamed mostafa - DevOps Engineer",
     description:
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "mohamed mostafa Portfolio",
     images: [
       {
-        url: "/images/placeholder-profile.png",
+        url: "/images/me.jpg",
         width: 1200,
         height: 630,
         alt: "mohamed mostafa - DevOps Engineer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "mohamed mostafa - DevOps Engineer",
     description:
       "Professional DevOps Engineer specializing in cloud infrastructure, automation, and scalable systems.",
-    images: ["/images/placeholder-profile.png"],
+    images: ["/images/me.jpg"],
   },
   robots: {
     index: true,
