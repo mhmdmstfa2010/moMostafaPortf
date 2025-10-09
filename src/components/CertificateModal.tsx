@@ -53,7 +53,10 @@ export default function CertificateModal({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Enhanced Header */}
-            <div className="sticky top-0 bg-white/95 backdrop-blur-md border-b border-blue-200/30 px-8 py-6 flex items-center justify-between z-10">
+            <div
+              className="sticky top-0  backdrop-blur-md border-b border-blue-200/30 px-8 py-6 flex items-center justify-between z-10"
+              style={{ background: "#eaf2ff" }}
+            >
               <div>
                 <h3
                   id="certificate-modal-title"
@@ -67,7 +70,7 @@ export default function CertificateModal({
               </div>
               <motion.button
                 onClick={onClose}
-                className="p-3 text-slate-500 hover:text-slate-700 hover:bg-blue-50 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2"
+                className="p-3 text-slate-500 hover:text-slate-700 hover:bg-white rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Close certificate modal"
