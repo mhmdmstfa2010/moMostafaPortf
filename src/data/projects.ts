@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     id: "scalable-web-app-alb-autoscaling",
     title: "Scalable Web Application with ALB and Auto Scaling",
-    image: "/images/scalable-app.png",
+    image: "/images/me.jpg",
     tech: [
       "AWS EC2",
       "Application Load Balancer (ALB)",
@@ -43,14 +43,14 @@ export const projects: Project[] = [
         "Designed and deployed a decoupled multi-tier AWS infrastructure using Terraform — featuring separate frontend and backend tiers, Application Load Balancers, Auto Scaling Groups, RDS MySQL in Multi-AZ configuration, and full CloudWatch monitoring with SNS alerts. Ensured network isolation and least-privilege security design through layered security groups and IAM roles.",
       results:
         "Achieved a production-ready, self-healing infrastructure that scales automatically with traffic, provides high availability across multiple Availability Zones, and maintains strong security posture with full observability and alerting. Reduced downtime and operational effort significantly while optimizing costs through autoscaling and right-sized resources.",
-      architectureImage: "/images/scalable-web-app-architecture.png",
+      architectureImage: "/images/me.jpg",
       repo: "https://github.com/mhmdmstfa2010/Scalable-Web-Application-with-ALB-and-Auto-Scaling",
     },
   },
   {
     id: "raffle-app",
     title: "Serverless Raffle Application",
-    image: "/images/raffle-app.png",
+    image: "/images/me.jpg",
     tech: [
       "AWS Lambda",
       "API Gateway",
@@ -72,14 +72,14 @@ export const projects: Project[] = [
         "Developed a fully serverless raffle application using AWS services — Lambda for compute, API Gateway for endpoints, DynamoDB for storage, and S3 with CloudFront for hosting. Automated deployment and provisioning using Terraform with modular IaC design.",
       results:
         "Achieved a secure, globally distributed, and cost-efficient raffle platform with zero server management. Auto-scaled to handle thousands of users, provided real-time winner draws, HTTPS encryption, and live participant tracking.",
-      architectureImage: "/images/raffle-architecture.png",
+      architectureImage: "/images/me.jpg",
       repo: "https://github.com/mhmdmstfa2010/Raffle-app",
     },
   },
   {
     id: "webapp-ci-cd-pipeline",
     title: "Webapp Deployment CI/CD Pipeline",
-    image: "/images/webapp-ci-cd.png",
+    image: "/images/me.jpg",
     tech: ["Python", "Docker", "Jenkins", "Ansible", "Vagrant"],
     short:
       "Automated end-to-end CI/CD pipeline for building and deploying a Python web application to multiple target machines using Jenkins, Docker, and Ansible.",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
         "Used Vagrant to provision two Ubuntu machines as deployment targets.",
         "Automated setup of Docker, image pulling, and container execution through Ansible tasks.",
       ],
-      architectureImage: "/images/webapp-ci-cd-architecture.png",
+      architectureImage: "/images/me.jpg",
       results:
         "Achieved a fully automated CI/CD pipeline after 70 iterative failures and debugging sessions — demonstrating resilience, incremental improvement, and real-world CI/CD troubleshooting experience.",
       repo: "https://github.com/mhmdmstfa2010/Webapp-deployment-CI-CD-pipeline-",
@@ -103,8 +103,7 @@ export const projects: Project[] = [
   {
     id: "xyz-pipeline",
     title: "Solar System App – Enterprise DevOps Pipeline",
-    image:
-      "https://github.com/mhmdmstfa2010/XYZ-pipline/blob/main/pics/xyz-pipeline.png?raw=true",
+    image: "/images/me.jpg",
     tech: [
       "Jenkins",
       "Docker",
@@ -128,8 +127,7 @@ export const projects: Project[] = [
         "Developed a fully automated CI/CD pipeline using Jenkins, with integrated testing, code quality gates, SAST/DAST scanning, container security, and GitOps-based multi-environment deployment to AWS EC2, Kubernetes, and Lambda.",
       results:
         "Reduced deployment time by 75%, achieved 90%+ test coverage, enabled zero-downtime releases, and established continuous security validation across all environments.",
-      architectureImage:
-        "https://github.com/mhmdmstfa2010/XYZ-pipline/blob/main/pics/xyz-pipeline.png?raw=true",
+      architectureImage: "/images/me.jpg",
       repo: "https://github.com/mhmdmstfa2010/XYZ-pipline",
     },
   },
