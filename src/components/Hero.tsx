@@ -88,8 +88,8 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue-100/50 rounded-2xl transform rotate-2 scale-105"></div>
 
             {/* Image container */}
-            <div className="relative bg-white rounded-2xl shadow-xl border border-blue-100 p-8 transform -rotate-1">
-              <div className="relative aspect-square max-w-sm mx-auto bg-slate-100 ">
+            <div className="relative bg-blue-100 rounded-2xl shadow-xl border border-blue-100 p-8 transform -rotate-1">
+              <div className="relative aspect-square max-w-sm mx-auto  ">
                 <Image
                   src={pic}
                   alt="mohamed mostafa - DevOps Engineer"
