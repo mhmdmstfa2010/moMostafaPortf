@@ -48,31 +48,6 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "konecta-ci-cd-pipeline",
-    title: "CI/CD Pipeline with Jenkins, Terraform, Ansible & Docker",
-    image: "/images/konecta-pipeline.png",
-    tech: ["Jenkins", "Terraform", "Ansible", "Docker", "AWS", "Nginx"],
-    short:
-      "End-to-end CI/CD pipeline automating infrastructure provisioning, container deployment, and resource cleanup using Jenkins, Terraform, Ansible, and Docker.",
-    details: {
-      problem:
-        "Infrastructure setup, deployment, and cleanup were performed manually, leading to delays, configuration drifts, and inconsistencies across environments.",
-      solution:
-        "Developed a fully automated multi-pipeline CI/CD solution integrating Jenkins, Terraform, Ansible, and Docker to provision AWS EC2 instances, deploy applications, and clean up resources daily.",
-      implementation: [
-        "Pipeline 1: Terraform provisions infrastructure with remote S3 backend; Ansible configures Docker.",
-        "Pipeline 2: Builds and pushes Docker images to a private Docker Hub registry, then deploys via SSH.",
-        "Pipeline 3: Scheduled daily cleanup using AWS CLI to terminate ephemeral instances.",
-        "Used Jenkins credentials for secure AWS, SSH, and Docker Hub integrations.",
-      ],
-      results:
-        "Achieved full automation of environment lifecycle — provisioning, deployment, and cleanup — with improved consistency, security, and speed. Demonstrated mastery of IaC and CI/CD orchestration in a real internship project.",
-      architectureImage:
-        "https://github.com/mhmdmstfa2010/konecta-pipeline/blob/main/imags/architecture.png",
-      repo: "https://github.com/mhmdmstfa2010/konecta-pipeline",
-    },
-  },
-  {
     id: "raffle-app",
     title: "Serverless Raffle Application",
     image: "/images/raffle-app.png",
