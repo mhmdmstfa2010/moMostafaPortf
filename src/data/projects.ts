@@ -9,121 +9,153 @@ export interface Project {
     solution: string;
     results: string;
     architectureImage: string;
+    implementation?: string[];
     repo: string;
-    live: string;
+    live?: string;
   };
 }
 
 export const projects: Project[] = [
   {
-    id: "ci-cd-microservices",
-    title: "Automated CI/CD for Microservices",
-    image: "/images/me.jpg",
-    tech: ["GitHub Actions", "Docker", "Kubernetes", "Terraform"],
+    id: "scalable-web-app-alb-autoscaling",
+    title: "Scalable Web Application with ALB and Auto Scaling",
+    image: "/images/scalable-app.png",
+    tech: [
+      "AWS EC2",
+      "Application Load Balancer (ALB)",
+      "Auto Scaling Groups",
+      "RDS MySQL (Multi-AZ)",
+      "VPC",
+      "NAT Gateway",
+      "CloudWatch",
+      "SNS",
+      "IAM",
+      "Apache",
+      "Node.js",
+      "Terraform",
+    ],
     short:
-      "End-to-end CI/CD pipeline with infrastructure automation for microservices architecture",
+      "Highly available and scalable web application infrastructure deployed on AWS using Terraform with multi-tier architecture, auto-scaling, and monitoring.",
     details: {
       problem:
-        "Manual deployment processes were causing delays, errors, and inconsistencies across environments, leading to reduced team productivity and increased risk of production issues.",
+        "Traditional monolithic web servers struggled with availability, scalability, and fault tolerance, leading to downtime and poor performance during high traffic periods.",
       solution:
-        "Implemented comprehensive CI/CD pipeline with GitHub Actions, containerized deployments with Docker and Kubernetes, infrastructure as code with Terraform, and blue-green deployment strategy for zero-downtime releases.",
+        "Designed and deployed a decoupled multi-tier AWS infrastructure using Terraform — featuring separate frontend and backend tiers, Application Load Balancers, Auto Scaling Groups, RDS MySQL in Multi-AZ configuration, and full CloudWatch monitoring with SNS alerts. Ensured network isolation and least-privilege security design through layered security groups and IAM roles.",
       results:
-        "Deployment time reduced by 70%, achieved zero-downtime deployments, reduced deployment errors by 95%, and improved developer productivity with automated testing and rollback capabilities.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
+        "Achieved a production-ready, self-healing infrastructure that scales automatically with traffic, provides high availability across multiple Availability Zones, and maintains strong security posture with full observability and alerting. Reduced downtime and operational effort significantly while optimizing costs through autoscaling and right-sized resources.",
+      architectureImage: "/images/scalable-web-app-architecture.png",
+      repo: "https://github.com/mhmdmstfa2010/Scalable-Web-Application-with-ALB-and-Auto-Scaling",
     },
   },
   {
-    id: "aws-infrastructure",
-    title: "Scalable AWS Infrastructure",
-    image: "/images/me.jpg",
-    tech: ["AWS", "Terraform", "CloudFormation", "Auto Scaling"],
+    id: "konecta-ci-cd-pipeline",
+    title: "CI/CD Pipeline with Jenkins, Terraform, Ansible & Docker",
+    image: "/images/konecta-pipeline.png",
+    tech: ["Jenkins", "Terraform", "Ansible", "Docker", "AWS", "Nginx"],
     short:
-      "Multi-tier AWS infrastructure with auto-scaling and disaster recovery",
+      "End-to-end CI/CD pipeline automating infrastructure provisioning, container deployment, and resource cleanup using Jenkins, Terraform, Ansible, and Docker.",
     details: {
       problem:
-        "Legacy on-premises infrastructure couldn't handle traffic spikes and lacked proper disaster recovery, resulting in downtime during peak usage periods.",
+        "Infrastructure setup, deployment, and cleanup were performed manually, leading to delays, configuration drifts, and inconsistencies across environments.",
       solution:
-        "Designed and implemented multi-tier AWS infrastructure using EC2, RDS, ELB, and Auto Scaling Groups. Implemented Infrastructure as Code with Terraform and set up cross-region disaster recovery.",
+        "Developed a fully automated multi-pipeline CI/CD solution integrating Jenkins, Terraform, Ansible, and Docker to provision AWS EC2 instances, deploy applications, and clean up resources daily.",
+      implementation: [
+        "Pipeline 1: Terraform provisions infrastructure with remote S3 backend; Ansible configures Docker.",
+        "Pipeline 2: Builds and pushes Docker images to a private Docker Hub registry, then deploys via SSH.",
+        "Pipeline 3: Scheduled daily cleanup using AWS CLI to terminate ephemeral instances.",
+        "Used Jenkins credentials for secure AWS, SSH, and Docker Hub integrations.",
+      ],
       results:
-        "Achieved 99.9% uptime, reduced infrastructure costs by 40%, improved response time by 60%, and established RTO of 15 minutes with automated disaster recovery.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
+        "Achieved full automation of environment lifecycle — provisioning, deployment, and cleanup — with improved consistency, security, and speed. Demonstrated mastery of IaC and CI/CD orchestration in a real internship project.",
+      architectureImage:
+        "https://github.com/mhmdmstfa2010/konecta-pipeline/blob/main/imags/architecture.png",
+      repo: "https://github.com/mhmdmstfa2010/konecta-pipeline",
     },
   },
   {
-    id: "monitoring-observability",
-    title: "Comprehensive Monitoring Stack",
-    image: "/images/me.jpg",
-    tech: ["Prometheus", "Grafana", "ELK Stack", "Jaeger"],
+    id: "raffle-app",
+    title: "Serverless Raffle Application",
+    image: "/images/raffle-app.png",
+    tech: [
+      "AWS Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "S3",
+      "CloudFront",
+      "Route53",
+      "ACM",
+      "Terraform",
+      "Bootstrap 5",
+      "JavaScript (ES6+)",
+    ],
     short:
-      "Full observability platform with metrics, logs, and distributed tracing",
+      "A complete AWS serverless raffle application enabling users to apply for raffles and administrators to draw winners in real time using a fully automated and scalable infrastructure.",
     details: {
       problem:
-        "Limited visibility into application performance and system health made troubleshooting difficult and prevented proactive issue resolution.",
+        "Traditional raffle and giveaway systems struggle with scalability, transparency, and manual management. Deploying and maintaining infrastructure manually led to inefficiencies and potential security issues.",
       solution:
-        "Implemented comprehensive observability stack with Prometheus for metrics, ELK Stack for centralized logging, Grafana for visualization, and Jaeger for distributed tracing across microservices.",
+        "Developed a fully serverless raffle application using AWS services — Lambda for compute, API Gateway for endpoints, DynamoDB for storage, and S3 with CloudFront for hosting. Automated deployment and provisioning using Terraform with modular IaC design.",
       results:
-        "Mean time to resolution (MTTR) reduced by 80%, proactive issue detection increased by 90%, and improved system reliability with comprehensive alerting and monitoring dashboards.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
+        "Achieved a secure, globally distributed, and cost-efficient raffle platform with zero server management. Auto-scaled to handle thousands of users, provided real-time winner draws, HTTPS encryption, and live participant tracking.",
+      architectureImage: "/images/raffle-architecture.png",
+      repo: "https://github.com/mhmdmstfa2010/Raffle-app",
     },
   },
   {
-    id: "kubernetes-platform",
-    title: "Enterprise Kubernetes Platform",
-    image: "/images/me.jpg",
-    tech: ["Kubernetes", "Helm", "Istio", "ArgoCD"],
-    short: "Production-ready Kubernetes platform with service mesh and GitOps",
+    id: "webapp-ci-cd-pipeline",
+    title: "Webapp Deployment CI/CD Pipeline",
+    image: "/images/webapp-ci-cd.png",
+    tech: ["Python", "Docker", "Jenkins", "Ansible", "Vagrant"],
+    short:
+      "Automated end-to-end CI/CD pipeline for building and deploying a Python web application to multiple target machines using Jenkins, Docker, and Ansible.",
     details: {
       problem:
-        "Development teams needed a self-service platform for deploying applications with proper security, networking, and operational best practices.",
+        "Manual deployment across multiple servers was time-consuming and error-prone, especially when handling build and configuration steps repeatedly.",
       solution:
-        "Built enterprise Kubernetes platform on AWS EKS with Istio service mesh, ArgoCD for GitOps deployments, Helm for package management, and comprehensive RBAC policies.",
+        "Developed a Jenkins pipeline that automates the entire workflow — from building and pushing Docker images to deploying containers on multiple target Vagrant machines using Ansible.",
+      implementation: [
+        "Containerized a Python web app using a custom Dockerfile.",
+        "Configured Jenkins to pull code, build Docker images, push them to Docker Hub, and run an Ansible playbook.",
+        "Used Vagrant to provision two Ubuntu machines as deployment targets.",
+        "Automated setup of Docker, image pulling, and container execution through Ansible tasks.",
+      ],
+      architectureImage: "/images/webapp-ci-cd-architecture.png",
       results:
-        "Reduced deployment time from hours to minutes, improved security posture with zero-trust networking, enabled self-service for 20+ development teams, and achieved 99.95% platform availability.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
+        "Achieved a fully automated CI/CD pipeline after 70 iterative failures and debugging sessions — demonstrating resilience, incremental improvement, and real-world CI/CD troubleshooting experience.",
+      repo: "https://github.com/mhmdmstfa2010/Webapp-deployment-CI-CD-pipeline-",
     },
   },
   {
-    id: "security-compliance",
-    title: "Security & Compliance Automation",
-    image: "/images/me.jpg",
-    tech: ["AWS Config", "CloudTrail", "Security Hub", "Terraform"],
-    short: "Automated security compliance and governance framework",
+    id: "xyz-pipeline",
+    title: "Solar System App – Enterprise DevOps Pipeline",
+    image:
+      "https://github.com/mhmdmstfa2010/XYZ-pipline/blob/main/pics/xyz-pipeline.png?raw=true",
+    tech: [
+      "Jenkins",
+      "Docker",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Kubernetes",
+      "AWS (EC2, Lambda, S3)",
+      "Terraform",
+      "SonarQube",
+      "Trivy",
+      "OWASP ZAP",
+      "Slack Integration",
+    ],
+    short:
+      "End-to-end CI/CD pipeline with full security automation, GitOps workflow, and multi-environment deployments across AWS and Kubernetes.",
     details: {
       problem:
-        "Manual security audits and compliance checks were time-consuming and prone to human error, making it difficult to maintain consistent security posture.",
+        "Manual deployments and lack of integrated security scanning caused delays, human errors, and increased production risks.",
       solution:
-        "Implemented automated security compliance framework using AWS Config rules, CloudTrail for audit logging, Security Hub for centralized findings, and automated remediation with Lambda functions.",
+        "Developed a fully automated CI/CD pipeline using Jenkins, with integrated testing, code quality gates, SAST/DAST scanning, container security, and GitOps-based multi-environment deployment to AWS EC2, Kubernetes, and Lambda.",
       results:
-        "Reduced compliance audit time by 75%, automated 90% of security checks, improved security posture with continuous monitoring, and achieved SOC 2 Type II compliance.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
-    },
-  },
-  {
-    id: "backup-disaster-recovery",
-    title: "Multi-Cloud Backup & DR",
-    image: "/images/me.jpg",
-    tech: ["AWS Backup", "Azure", "Veeam", "Terraform"],
-    short: "Cross-cloud backup and disaster recovery solution",
-    details: {
-      problem:
-        "Single-cloud dependency posed business continuity risks, and existing backup solutions didn't meet RTO/RPO requirements for critical applications.",
-      solution:
-        "Designed multi-cloud backup and disaster recovery strategy spanning AWS and Azure, implemented automated backup scheduling, cross-region replication, and disaster recovery testing procedures.",
-      results:
-        "Achieved RPO of 1 hour and RTO of 30 minutes, reduced backup storage costs by 50% with intelligent tiering, and established business continuity with 99.99% data durability.",
-      architectureImage: "/images/placeholder-arch.png",
-      repo: "#",
-      live: "#",
+        "Reduced deployment time by 75%, achieved 90%+ test coverage, enabled zero-downtime releases, and established continuous security validation across all environments.",
+      architectureImage:
+        "https://github.com/mhmdmstfa2010/XYZ-pipline/blob/main/pics/xyz-pipeline.png?raw=true",
+      repo: "https://github.com/mhmdmstfa2010/XYZ-pipline",
     },
   },
 ];
