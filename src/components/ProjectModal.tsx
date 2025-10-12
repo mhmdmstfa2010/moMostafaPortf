@@ -115,7 +115,7 @@ export default function ProjectModal({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="relative h-72 sm:h-96 rounded-2xl overflow-hidden mb-8 shadow-2xl"
+                  className="relative h-72 sm:h-96 rounded-2xl overflow-hidden mb-8 shadow-2xl bg-slate-50"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent z-10"></div>
                   <Image
@@ -123,7 +123,7 @@ export default function ProjectModal({
                     alt={`${project.title} screenshot`}
                     width={800}
                     height={400}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-white rounded-2xl p-4"
                   />
                 </motion.div>
 
@@ -203,13 +203,6 @@ export default function ProjectModal({
                 </motion.div>
 
                 {/* Architecture Image */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  className="mb-8"
-                ></motion.div>
-
                 {/* Links */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

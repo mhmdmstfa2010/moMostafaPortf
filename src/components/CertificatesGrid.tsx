@@ -33,7 +33,7 @@ export default function CertificatesGrid() {
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-          {certificates.map((certificate, index) => (
+          {certificates.map((certificate) => (
             <CertificateCard
               key={certificate.id}
               certificate={certificate}
