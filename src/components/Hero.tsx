@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import pic from "../../public/images/me.jpg";
-import { OptimizedMotion, OptimizedSection } from "./OptimizedMotion";
+import { OptimizedSection } from "./OptimizedMotion";
 
 export default function Hero() {
   return (

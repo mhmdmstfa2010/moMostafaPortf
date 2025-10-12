@@ -8,12 +8,8 @@ import {
   FiBox,
   FiActivity,
   FiServer,
-  FiDatabase,
-  FiShield,
   FiMonitor,
-  FiCode,
   FiTool,
-  FiZap,
 } from "react-icons/fi";
 
 const getLevelColor = (
