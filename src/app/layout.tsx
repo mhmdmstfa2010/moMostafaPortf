@@ -68,9 +68,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PerformanceProvider>
-          {children}
-        </PerformanceProvider>
+        <PerformanceProvider>{children}</PerformanceProvider>
       </body>
     </html>
   );

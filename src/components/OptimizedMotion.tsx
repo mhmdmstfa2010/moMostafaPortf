@@ -4,9 +4,10 @@ import { motion, HTMLMotionProps } from "framer-motion";
 import { usePerformance } from "../contexts/PerformanceContext";
 import { getOptimizedVariant } from "../utils/optimizedAnimations";
 
-interface OptimizedMotionProps extends Omit<HTMLMotionProps<"div">, "initial" | "animate" | "exit"> {
+interface OptimizedMotionProps
+  extends Omit<HTMLMotionProps<"div">, "initial" | "animate" | "exit"> {
   children: React.ReactNode;
-  animationType?: 'full' | 'simple' | 'none';
+  animationType?: "full" | "simple" | "none";
   enableHover?: boolean;
   className?: string;
   fallbackClassName?: string; // CSS class للأجهزة الضعيفة
@@ -14,40 +15,42 @@ interface OptimizedMotionProps extends Omit<HTMLMotionProps<"div">, "initial" | 
 
 export function OptimizedMotion({
   children,
-  animationType = 'full',
+  animationType = "full",
   enableHover = true,
-  className = '',
-  fallbackClassName = '',
+  className = "",
+  fallbackClassName = "",
   ...props
 }: OptimizedMotionProps) {
   const { enableAnimations, isLowEndDevice } = usePerformance();
-  
+
   // للأجهزة الضعيفة - استخدم div عادي مع CSS animations
   if (isLowEndDevice && !enableAnimations) {
     return (
-      <div 
+      <div
         className={`${className} ${fallbackClassName}`}
-        {...(props as any)}//eslint-disable-line
+        {...(props as any)} //eslint-disable-line
       >
         {children}
       </div>
     );
   }
 
-  const variant = getOptimizedVariant(enableAnimations, isLowEndDevice, animationType);
-  
-  const hoverProps = enableHover && enableAnimations && !isLowEndDevice ? {
-    whileHover: { scale: 1.02 },
-    transition: { duration: 0.15 }
-  } : {};
+  const variant = getOptimizedVariant(
+    enableAnimations,
+    isLowEndDevice,
+    animationType
+  );
+
+  const hoverProps =
+    enableHover && enableAnimations && !isLowEndDevice
+      ? {
+          whileHover: { scale: 1.02 },
+          transition: { duration: 0.15 },
+        }
+      : {};
 
   return (
-    <motion.div
-      {...variant}
-      {...hoverProps}
-      className={className}
-      {...props}
-    >
+    <motion.div {...variant} {...hoverProps} className={className} {...props}>
       {children}
     </motion.div>
   );
