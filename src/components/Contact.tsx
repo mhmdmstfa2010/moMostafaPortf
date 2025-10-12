@@ -29,12 +29,12 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:mo@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:mhmdmstfa710@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("mo@example.com");
+      await navigator.clipboard.writeText("mhmdmstfa710@gmail.com");
       setEmailCopied(true);
       setTimeout(() => setEmailCopied(false), 2000);
     } catch (err) {
@@ -86,7 +86,9 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium text-slate-800">Email</p>
-                  <p className="text-slate-600 text-sm">mo@example.com</p>
+                  <p className="text-slate-600 text-sm">
+                    mhmdmstfa710@gmail.com
+                  </p>
                 </div>
                 <button
                   onClick={copyEmail}
@@ -109,7 +111,7 @@ export default function Contact() {
               </h4>
               <div className="flex gap-4">
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/mhmdmstfa2010"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 bg-white/90 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2 transform hover:scale-110"
@@ -121,7 +123,7 @@ export default function Contact() {
                 </motion.a>
 
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mohamed-moustafa20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 bg-white/90 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2 transform hover:scale-110"

@@ -47,7 +47,7 @@ export default function Hero() {
 
               <div className="flex gap-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/mhmdmstfa2010"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-95"
@@ -57,7 +57,7 @@ export default function Hero() {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mohamed-moustafa20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-95"
@@ -67,7 +67,7 @@ export default function Hero() {
                 </a>
 
                 <a
-                  href="mailto:mo@example.com"
+                  href="mailto:mhmdmstfa710@gmail.com"
                   className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-95"
                   aria-label="Send Email"
                 >

@@ -194,7 +194,7 @@ export default function NavBar() {
             {/* small socials row (optional) */}
             <div className="pt-2 border-t border-blue-200/30 mt-2 flex items-center gap-3">
               <Link
-                href="https://github.com/youseif-elshreif"
+                href="https://github.com/mhmdmstfa2010"
                 onClick={(e) => e}
                 className="text-sm text-slate-600 hover:text-blue-700"
               >

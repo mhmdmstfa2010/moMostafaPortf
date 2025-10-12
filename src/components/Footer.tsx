@@ -70,7 +70,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white">Connect</h4>
             <div className="flex gap-4">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/mhmdmstfa2010"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
@@ -82,7 +82,7 @@ export default function Footer() {
               </motion.a>
 
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mohamed-moustafa20/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
@@ -94,7 +94,7 @@ export default function Footer() {
               </motion.a>
 
               <motion.a
-                href="mailto:mo@example.com"
+                href="mailto:mhmdmstfa710@gmail.com"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
