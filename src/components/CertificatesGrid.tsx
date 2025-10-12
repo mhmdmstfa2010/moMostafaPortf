@@ -4,25 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { certificates, Certificate } from "../data/certificates";
 import CertificateCard from "./CertificateCard";
-import CertificateModal from "./CertificateModal";
 
 export default function CertificatesGrid() {
-  const [selectedCertificate, setSelectedCertificate] =
     useState<Certificate | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = (certificateId: string) => {
-    const certificate = certificates.find((c) => c.id === certificateId);
-    if (certificate) {
-      setSelectedCertificate(certificate);
-      setIsModalOpen(true);
-    }
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedCertificate(null);
-  };
 
   return (
     <section
@@ -53,18 +37,10 @@ export default function CertificatesGrid() {
             <CertificateCard
               key={certificate.id}
               certificate={certificate}
-              onOpen={handleOpenModal}
-              index={index}
             />
           ))}
         </div>
 
-        {/* Certificate Modal */}
-        <CertificateModal
-          isOpen={isModalOpen}
-          certificate={selectedCertificate}
-          onClose={handleCloseModal}
-        />
       </div>
     </section>
   );

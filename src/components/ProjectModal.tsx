@@ -208,22 +208,7 @@ export default function ProjectModal({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="mb-8"
-                >
-                  <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <div className="w-2 h-6 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
-                    Architecture Overview
-                  </h3>
-                  <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 border-2 border-blue-200/50 shadow-xl">
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent z-10"></div>
-                    <Image
-                      src={project.details.architectureImage}
-                      alt={`${project.title} architecture diagram`}
-                      width={800}
-                      height={400}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </motion.div>
+                ></motion.div>
 
                 {/* Links */}
                 <motion.div
