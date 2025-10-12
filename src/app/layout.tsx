@@ -56,6 +56,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { PerformanceProvider } from "../contexts/PerformanceContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,7 +68,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <PerformanceProvider>
+          {children}
+        </PerformanceProvider>
       </body>
     </html>
   );

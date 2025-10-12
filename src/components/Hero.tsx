@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import pic from "../../public/images/me.jpg";
+import { OptimizedMotion, OptimizedSection } from "./OptimizedMotion";
 
 export default function Hero() {
   return (
@@ -14,10 +14,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <OptimizedSection
+            animationType="full"
             className="space-y-8 lg:order-1"
           >
             <div className="space-y-4">
@@ -75,13 +73,11 @@ export default function Hero() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </OptimizedSection>
 
           {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          <OptimizedSection
+            animationType="simple"
             className="relative lg:order-2"
           >
             {/* Simplified background panel */}
@@ -100,7 +96,7 @@ export default function Hero() {
                 />
               </div>
             </div>
-          </motion.div>
+          </OptimizedSection>
         </div>
       </div>
     </section>

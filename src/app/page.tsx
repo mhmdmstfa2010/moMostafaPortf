@@ -6,6 +6,7 @@ import ProjectsGrid from "../components/ProjectsGrid";
 import CertificatesGrid from "../components/CertificatesGrid";
 import Footer from "../components/Footer";
 import Contact from "@/components/Contact";
+import PerformanceMonitor from "../components/PerformanceMonitor";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <PerformanceMonitor />
     </div>
   );
 }
