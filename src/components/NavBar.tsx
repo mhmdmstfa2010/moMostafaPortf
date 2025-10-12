@@ -46,20 +46,30 @@ export default function NavBar() {
   }, []);
 
   const scrollToSection = (href: string) => {
-    const target = document.querySelector(href);
-    if (target) {
-      // Get the target's position
-      const targetPosition =
-        target.getBoundingClientRect().top + window.pageYOffset;
-      // Offset for fixed navbar (adjust as needed)
-      const offset = 80;
-
-      window.scrollTo({
-        top: targetPosition - offset,
-        behavior: "smooth",
-      });
-    }
+    // إغلاق القائمة أولاً
     setIsOpen(false);
+
+    // انتظار صغير لإغلاق القائمة قبل السكرول
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) {
+        const rect = target.getBoundingClientRect();
+        const offsetTop = window.pageYOffset + rect.top;
+        // تحسين للموبايل - offset أكبر
+        const offset = window.innerWidth < 768 ? 100 : 80;
+
+        // استخدام scrollTo محسن للموبايل
+        if ("scrollBehavior" in document.documentElement.style) {
+          window.scrollTo({
+            top: offsetTop - offset,
+            behavior: "smooth",
+          });
+        } else {
+          // Fallback للمتصفحات القديمة
+          window.scrollTo(0, offsetTop - offset);
+        }
+      }
+    }, 100); // انتظار 100ms لإغلاق القائمة
   };
 
   return (

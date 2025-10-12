@@ -55,7 +55,6 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: "AWS", icon: <FiCloud />, level: "Expert" },
       { name: "Azure", icon: <FiCloud />, level: "Advanced" },
-      { name: "Google Cloud", icon: <FiCloud />, level: "Intermediate" },
     ],
   },
   {
@@ -101,10 +100,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
-            className="inline-block"
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div className="inline-block" transition={{ duration: 0.3 }}>
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-4">
               Technical Skills
             </h2>
