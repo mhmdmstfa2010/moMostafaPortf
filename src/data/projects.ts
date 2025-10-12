@@ -16,6 +16,36 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "xyz-pipeline",
+    title: "Solar System App – Enterprise DevOps Pipeline",
+    image: "/images/projects/xyz.png",
+    tech: [
+      "Jenkins",
+      "Docker",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Kubernetes",
+      "AWS (EC2, Lambda, S3)",
+      "Terraform",
+      "SonarQube",
+      "Trivy",
+      "OWASP ZAP",
+      "Slack Integration",
+    ],
+    short:
+      "End-to-end CI/CD pipeline with full security automation, GitOps workflow, and multi-environment deployments across AWS and Kubernetes.",
+    details: {
+      problem:
+        "Manual deployments and lack of integrated security scanning caused delays, human errors, and increased production risks.",
+      solution:
+        "Developed a fully automated CI/CD pipeline using Jenkins, with integrated testing, code quality gates, SAST/DAST scanning, container security, and GitOps-based multi-environment deployment to AWS EC2, Kubernetes, and Lambda.",
+      results:
+        "Reduced deployment time by 75%, achieved 90%+ test coverage, enabled zero-downtime releases, and established continuous security validation across all environments.",
+      repo: "https://github.com/mhmdmstfa2010/XYZ-pipline",
+    },
+  },
+  {
     id: "scalable-web-app-alb-autoscaling",
     title: "Scalable Web Application with ALB and Auto Scaling",
     image:
@@ -95,36 +125,6 @@ export const projects: Project[] = [
       results:
         "Achieved a fully automated CI/CD pipeline after 70 iterative failures and debugging sessions — demonstrating resilience, incremental improvement, and real-world CI/CD troubleshooting experience.",
       repo: "https://github.com/mhmdmstfa2010/Webapp-deployment-CI-CD-pipeline-",
-    },
-  },
-  {
-    id: "xyz-pipeline",
-    title: "Solar System App – Enterprise DevOps Pipeline",
-    image: "/images/projects/xyz.png",
-    tech: [
-      "Jenkins",
-      "Docker",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Kubernetes",
-      "AWS (EC2, Lambda, S3)",
-      "Terraform",
-      "SonarQube",
-      "Trivy",
-      "OWASP ZAP",
-      "Slack Integration",
-    ],
-    short:
-      "End-to-end CI/CD pipeline with full security automation, GitOps workflow, and multi-environment deployments across AWS and Kubernetes.",
-    details: {
-      problem:
-        "Manual deployments and lack of integrated security scanning caused delays, human errors, and increased production risks.",
-      solution:
-        "Developed a fully automated CI/CD pipeline using Jenkins, with integrated testing, code quality gates, SAST/DAST scanning, container security, and GitOps-based multi-environment deployment to AWS EC2, Kubernetes, and Lambda.",
-      results:
-        "Reduced deployment time by 75%, achieved 90%+ test coverage, enabled zero-downtime releases, and established continuous security validation across all environments.",
-      repo: "https://github.com/mhmdmstfa2010/XYZ-pipline",
     },
   },
 ];

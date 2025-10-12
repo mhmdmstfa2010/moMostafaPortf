@@ -20,7 +20,7 @@ export default function Hero() {
           >
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                mohamed mostafa
+                Mohamed Moustafa
               </h1>
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
                 DevOps Engineer
@@ -88,7 +88,7 @@ export default function Hero() {
               <div className="relative aspect-square max-w-sm mx-auto  ">
                 <Image
                   src={pic}
-                  alt="mohamed mostafa - DevOps Engineer"
+                  alt="Mohamed Moustafa - DevOps Engineer"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-105"

@@ -102,7 +102,7 @@ export default function NavBar() {
               </span>
               <div className="sm:block text-sm flex flex-col text-left">
                 <div className="text-slate-800 font-semibold">
-                  mohamed mostafa
+                  Mohamed Moustafa
                 </div>
                 <div className="text-xs text-slate-600 -mt-0.5">
                   DevOps Engineer

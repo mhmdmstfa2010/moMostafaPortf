@@ -16,7 +16,9 @@ import {
   FiZap,
 } from "react-icons/fi";
 
-const getLevelColor = (level: "Expert" | "Advanced" | "Intermediate") => {
+const getLevelColor = (
+  level: "Expert" | "Advanced" | "Intermediate" | "Beginner"
+) => {
   switch (level) {
     case "Expert":
       return "bg-gradient-to-r from-blue-900 to-indigo-800 text-white";
@@ -32,7 +34,7 @@ const getLevelColor = (level: "Expert" | "Advanced" | "Intermediate") => {
 interface Skill {
   name: string;
   icon: React.ReactNode;
-  level: "Expert" | "Advanced" | "Intermediate";
+  level: "Expert" | "Advanced" | "Intermediate" | "Beginner";
 }
 
 interface SkillGroup {
@@ -46,24 +48,20 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: "GitHub Actions", icon: <FiGitBranch />, level: "Expert" },
       { name: "Jenkins", icon: <FiTool />, level: "Expert" },
-      { name: "GitLab CI", icon: <FiGitBranch />, level: "Advanced" },
-      { name: "Azure DevOps", icon: <FiCode />, level: "Advanced" },
     ],
   },
   {
     title: "Cloud Platforms",
     skills: [
       { name: "AWS", icon: <FiCloud />, level: "Expert" },
-      { name: "Azure", icon: <FiCloud />, level: "Advanced" },
+      { name: "Azure", icon: <FiCloud />, level: "Beginner" },
     ],
   },
   {
     title: "Infrastructure as Code",
     skills: [
       { name: "Terraform", icon: <FiSettings />, level: "Expert" },
-      { name: "CloudFormation", icon: <FiSettings />, level: "Advanced" },
       { name: "Ansible", icon: <FiTool />, level: "Advanced" },
-      { name: "Pulumi", icon: <FiCode />, level: "Intermediate" },
     ],
   },
   {
@@ -71,8 +69,7 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: "Docker", icon: <FiBox />, level: "Expert" },
       { name: "Kubernetes", icon: <FiServer />, level: "Expert" },
-      { name: "Helm", icon: <FiSettings />, level: "Advanced" },
-      { name: "Istio", icon: <FiShield />, level: "Advanced" },
+      { name: "Helm", icon: <FiSettings />, level: "Beginner" },
     ],
   },
   {
@@ -80,8 +77,6 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: "Prometheus", icon: <FiActivity />, level: "Expert" },
       { name: "Grafana", icon: <FiMonitor />, level: "Expert" },
-      { name: "ELK Stack", icon: <FiDatabase />, level: "Advanced" },
-      { name: "Jaeger", icon: <FiZap />, level: "Advanced" },
     ],
   },
 ];
@@ -126,16 +121,9 @@ export default function Skills() {
               </h3>
 
               <div className="space-y-4">
-                {group.skills.map((skill, skillIndex) => (
-                  <motion.div
+                {group.skills.map((skill) => (
+                  <div
                     key={skill.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.4,
-                      delay: groupIndex * 0.1 + skillIndex * 0.05,
-                    }}
                     className="flex items-center gap-3 p-3 rounded-lg bg-white/80 border border-blue-100/50 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 flex-1">
@@ -157,7 +145,7 @@ export default function Skills() {
                     >
                       {skill.level}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </motion.div>

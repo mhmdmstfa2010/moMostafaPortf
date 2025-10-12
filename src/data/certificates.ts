@@ -12,9 +12,8 @@ export const certificates: Certificate[] = [
     name: "AWS Certified Solutions Architect – Associate",
     issuer: "Amazon Web Services",
     image: "/images/certs/SAA.jpg",
-    issueDate: "2024-08-10",
+    issueDate: "2025-08-10",
   },
-
   {
     id: "aws-cloud-practitioner",
     name: "AWS Certified Cloud Practitioner",
