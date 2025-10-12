@@ -19,7 +19,8 @@ export const projects: Project[] = [
   {
     id: "scalable-web-app-alb-autoscaling",
     title: "Scalable Web Application with ALB and Auto Scaling",
-    image: "/images/me.jpg",
+    image:
+      "/images/projects/Scalable Web Application with ALB and Auto Scaling.png",
     tech: [
       "AWS EC2",
       "Application Load Balancer (ALB)",
@@ -50,7 +51,7 @@ export const projects: Project[] = [
   {
     id: "raffle-app",
     title: "Serverless Raffle Application",
-    image: "/images/me.jpg",
+    image: "/images/projects/raffle-app.jpg",
     tech: [
       "AWS Lambda",
       "API Gateway",
@@ -79,7 +80,7 @@ export const projects: Project[] = [
   {
     id: "webapp-ci-cd-pipeline",
     title: "Webapp Deployment CI/CD Pipeline",
-    image: "/images/me.jpg",
+    image: "/images/projects/diagram-export-12-23-2024-4_10_00-PM.png",
     tech: ["Python", "Docker", "Jenkins", "Ansible", "Vagrant"],
     short:
       "Automated end-to-end CI/CD pipeline for building and deploying a Python web application to multiple target machines using Jenkins, Docker, and Ansible.",
@@ -103,7 +104,7 @@ export const projects: Project[] = [
   {
     id: "xyz-pipeline",
     title: "Solar System App – Enterprise DevOps Pipeline",
-    image: "/images/me.jpg",
+    image: "/images/projects/xyz-pipeline.png",
     tech: [
       "Jenkins",
       "Docker",

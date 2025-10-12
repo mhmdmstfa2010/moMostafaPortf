@@ -11,7 +11,7 @@ export const certificates: Certificate[] = [
     id: "aws-saa",
     name: "AWS Certified Solutions Architect – Associate",
     issuer: "Amazon Web Services",
-    image: "/images/aws-saa.png",
+    image: "/images/certs/SAA.jpg",
     issueDate: "2024-08-10",
   },
 
@@ -19,14 +19,14 @@ export const certificates: Certificate[] = [
     id: "aws-cloud-practitioner",
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
-    image: "/images/aws-cloud-practitioner.png",
+    image: "/images/certs/clf.png",
     issueDate: "2024-10-19",
   },
   {
     id: "azure-fundamentals",
     name: "Microsoft Certified: Azure Fundamentals",
     issuer: "Microsoft",
-    image: "/images/azure-fundamentals.png",
+    image: "/images/certs/azure.jpeg",
     issueDate: "2025-06-30",
   },
 ];
