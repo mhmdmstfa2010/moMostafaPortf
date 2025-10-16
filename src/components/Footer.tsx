@@ -21,11 +21,11 @@ export default function Footer() {
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">
-                MM
+                MJ
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">
-                  Mohamed Moustafa
+                  Mohamed Jibeerl
                 </h3>
                 <p className="text-slate-400 text-sm">DevOps Engineer</p>
               </div>
@@ -82,7 +82,7 @@ export default function Footer() {
               </motion.a>
 
               <motion.a
-                href="https://www.linkedin.com/in/mohamed-moustafa20/"
+                href="https://www.linkedin.com/in/mohamed-Jibeerl20/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
@@ -116,7 +116,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-slate-400 text-sm"
             >
-              © {currentYear} Mohamed Moustafa. All rights reserved.
+              © {currentYear} Mohamed Jibeerl. All rights reserved.
             </motion.p>
 
             <motion.div
