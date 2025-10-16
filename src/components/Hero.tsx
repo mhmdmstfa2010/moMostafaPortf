@@ -20,7 +20,7 @@ export default function Hero() {
           >
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                Mohamed Jibeerl
+                Mohamed Moustafa
               </h1>
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
                 DevOps Engineer
@@ -35,7 +35,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/Mohamed_Jibeerl_CV.pdf"
+                href="/Mohamed_moustafa_CV.pdf"
                 download
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-900 to-indigo-800 text-white font-medium rounded-full hover:from-blue-800 hover:to-indigo-700 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-95"
               >
@@ -55,7 +55,7 @@ export default function Hero() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/mohamed-Jibeerl20/"
+                  href="https://www.linkedin.com/in/mohamed-moustafa20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-95"
@@ -88,7 +88,7 @@ export default function Hero() {
               <div className="relative aspect-square max-w-sm mx-auto  ">
                 <Image
                   src={pic}
-                  alt="Mohamed Jibeerl - DevOps Engineer"
+                  alt="Mohamed Moustafa - DevOps Engineer"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-105"

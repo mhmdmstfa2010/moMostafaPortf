@@ -123,7 +123,7 @@ export default function Contact() {
                 </motion.a>
 
                 <motion.a
-                  href="https://www.linkedin.com/in/mohamed-Jibeerl20/"
+                  href="https://www.linkedin.com/in/mohamed-moustafa20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 bg-white/90 border-2 border-blue-200 text-slate-600 rounded-full hover:border-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:ring-offset-2 transform hover:scale-110"
