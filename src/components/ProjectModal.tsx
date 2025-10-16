@@ -85,17 +85,19 @@ export default function ProjectModal({
           >
             {/* Header */}
             <div
-              className="sticky top-0 backdrop-blur-md border-b border-blue-200/30 px-8 py-6 flex items-center justify-between z-10"
+              className="sticky top-0 backdrop-blur-md border-b border-blue-200/30 px-4 py-3 md:px-8 md:py-6 flex items-center justify-between z-10"
               style={{ background: "#eaf2ff" }}
             >
               <div>
                 <h2
                   id="modal-title"
-                  className="text-3xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent"
+                  className="text-lg md:text-3xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent"
                 >
                   {project.title}
                 </h2>
-                <p className="text-slate-600 text-sm mt-1">{project.short}</p>
+                <p className="text-slate-600 hidden md:block text-sm mt-1">
+                  {project.short}
+                </p>
               </div>
               <motion.button
                 onClick={onClose}
@@ -221,7 +223,6 @@ export default function ProjectModal({
                     <FiGithub className="w-5 h-5" />
                     View Repository
                   </motion.a>
-
                 </motion.div>
               </div>
             </div>
