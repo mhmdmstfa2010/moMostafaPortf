@@ -98,7 +98,7 @@ export default function NavBar() {
               className="flex items-center gap-3"
             >
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-blue-900 to-indigo-800 text-white font-semibold shadow-lg">
-                M
+                MM
               </span>
               <div className="sm:block text-sm flex flex-col text-left">
                 <div className="text-slate-800 font-semibold">
@@ -211,7 +211,7 @@ export default function NavBar() {
                 GitHub
               </Link>
               <Link
-                href="https://www.linkedin.com/in/youseif-elshreif-2930a6227"
+                href="https://www.linkedin.com/in/mohamed-moustafa20/"
                 onClick={(e) => e}
                 className="text-sm text-slate-600 hover:text-blue-700"
               >
